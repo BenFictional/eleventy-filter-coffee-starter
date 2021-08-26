@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+
+<article class="page">
+<h1 class="page-title"> {{ title }}</h1>
+{{ content | safe}}
+</article>
+
+
+
+<ul class="timeline">
+  {% set postslist = collections.projects %}
+  {% for post in postslist %}
+    
+       {% include "partials/project-card.njk" %}
+
+  {% endfor %}
+</ul>
+
+{# <script type="javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> #}
+{# <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script> #}
+{# <script type="text/javascript" src="/js/isotope.pkgd-min.js"></script> #}
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/js/isotope-setup-min.js"></script>
+
+{% endblock %}
+
+

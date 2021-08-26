@@ -40,6 +40,14 @@ article {
     .post-description {flex: 2;}   
 }
 
+// PROJECTS
+.card {
+    background-color: var(--surface-emphasis);
+    display: flex;
+    flex-direction: column;
+    max-width: 45ch;
+}
+
 // Footer
 footer {
     width: 100%;
