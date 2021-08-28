@@ -8,10 +8,22 @@
 {{ content | safe}}
 </article>
 
+<nav class="timeline-filter">
+  {# Set for all #}
+  {% set postslist = collections.projects %}
+  
+    <button class="is-checked" data-filter="*">All</button>
+    {% for project_type in postslist | uniqueTypes %}
+      <button href="#" class="filter-button" data-filter=".{{ project_type }}">{{ project_type }}</button>
+    {% endfor %}
+    {% for media in postslist | uniqueMedia %}
+      <button href="#" class="filter-button" data-filter=".{{ media }}">{{ media }}</button>
+    {% endfor %}
 
+</nav>
 
 <ul class="timeline">
-  {% set postslist = collections.projects %}
+ 
   {% for post in postslist %}
     
        {% include "partials/project-card.njk" %}
@@ -19,15 +31,9 @@
   {% endfor %}
 </ul>
 
-{# <script type="javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> #}
-{# <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"></script> #}
-{# <script type="text/javascript" src="/js/isotope.pkgd-min.js"></script> #}
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="/js/isotope-setup-min.js"></script>
+<script src="/js/isotope-setup-min.js"></script>
 
 {% endblock %}
 

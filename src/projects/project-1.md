@@ -8,10 +8,12 @@ featured_image: /images/yak.jpg
 featured_alt: A photo of a yak.
 tags: 
     - projects
-    - art 
+project_type:
+    - art
 media: 
     - installation
     - audio
+    - video
 ---
 
 I made this.

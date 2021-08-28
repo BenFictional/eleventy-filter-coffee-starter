@@ -68,6 +68,33 @@ module.exports = (config) => {
   // Get current year
   config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Project media list
+  config.addFilter("uniqueMedia", (array) => {
+    let media = new Set()
+    for (const p of array) {
+      if (p.data && p.data.media) {
+        for (const mediaItem of p.data.media) {
+          media.add(mediaItem)
+        }
+      }
+    }
+    return [...media]
+  })
+
+   // Project type list
+   config.addFilter("uniqueTypes", (array) => {
+    let types = new Set()
+    for (const p of array) {
+      if (p.data && p.data.project_type) {
+        for (const typeItem of p.data.project_type) {
+          types.add(typeItem)
+        }
+      }
+    }
+    return [...types]
+  })
+
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

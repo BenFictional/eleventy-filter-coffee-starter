@@ -8,5 +8,6 @@ featured_image:
 featured_alt: 
 tags: 
     - projects
+project_type: 
     - life
 ---

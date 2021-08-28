@@ -1,21 +1,9 @@
-<li class="project card">
+<li class="project card {{ post.data.project_type }}">
 
       {# HEADER #}
       <ul class="project-meta">
-        {# TAG #}
-          <li>
-        {% for item in post.data.tags %}
-            {%- if item == 'art' -%}
-              {{ item | capitalize }}:       
-            {% endif %}
-            {%- if item == 'design' -%}
-              {{ item | capitalize }}:       
-            {% endif %}
-            {%- if item == 'life' -%}
-              {{ item | capitalize }}:       
-            {% endif %}
-        {% endfor %}
-        </li>
+        {# TYPE #}
+        <li>{{ post.data.project_type }}</li>
 
         {# YEAR #}
         <li> <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | yearOnly }}</time></li>
@@ -27,21 +15,27 @@
       {# IMAGE #}
       <img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}">
 
-
-      {# TITLE #}
-      {% if post.data.tags.includes("life") %}
+      <div class="project-text">
+      
+        {# TITLE #}
+        {% if post.data.project_type.includes("life") %}
             <h2>{{ post.data.title }}</h2>
         {% else %}
-      <a class="post-title" href="{{ post.url | url }}"><h2>{{ post.data.title }}</h2></a>
-       {% endif %}
+            <a class="post-title" href="{{ post.url | url }}"><h2>{{ post.data.title }}</h2></a>
+        {% endif %}
 
-      {# MEDIA #}
-      {% set comma = joiner() %}
-      {% for item in post.data.media %}
-            {{ comma() }} {{ item | capitalize }}
-      {% endfor %}
+        {# MEDIA #}
+        <p class="media-list">
+           {% set comma = joiner("/") %}
+           {% for item in post.data.media %}
+              {{ comma() }} {{ item | capitalize }}
+          {% endfor %}
+        </p>
+       
 
-      {# DESCRIPTION #}
-      <span class="post-description">{{ post.data.description }}</span>
+        {# DESCRIPTION #}
+        <span class="post-description">{{ post.data.description }}</span>
+
+      </div>
 
     </li>

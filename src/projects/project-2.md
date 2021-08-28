@@ -8,7 +8,8 @@ featured_image: /images/yak.jpg
 featured_alt: A photo of a yak.
 tags: 
     - projects
-    - design 
+project_type: 
+    - design
 media: 
     - video 
     - web
