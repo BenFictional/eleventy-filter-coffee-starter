@@ -8,17 +8,25 @@
 {{ content | safe}}
 </article>
 
-<nav class="timeline-filter">
+<nav class="filters">
   {# Set for all #}
   {% set postslist = collections.projects %}
-  
-    <button class="is-checked" data-filter="*">All</button>
-    {% for project_type in postslist | uniqueTypes %}
-      <button href="#" class="filter-button" data-filter=".{{ project_type }}">{{ project_type }}</button>
-    {% endfor %}
+
+    <label>Type:</label>
+    <ul class="button-group" data-filter-group="project-type">
+      <li><button class="is-checked" data-filter="">All</button></li>
+      {% for project_type in postslist | uniqueTypes %}
+        <li><button href="#" class="filter-button" data-filter=".{{ project_type }}">{{ project_type }}</button></li>
+      {% endfor %}
+    </ul>
+    
+    <label>Media:</label>
+    <ul class="button-group" data-filter-group="media">
+      <li><button class="is-checked" data-filter="">All</button></li>
     {% for media in postslist | uniqueMedia %}
-      <button href="#" class="filter-button" data-filter=".{{ media }}">{{ media }}</button>
+      <li><button href="#" class="filter-button" data-filter=".{{ media }}">{{ media }}</button></li>
     {% endfor %}
+    </ul>  
 
 </nav>
 
@@ -30,6 +38,8 @@
 
   {% endfor %}
 </ul>
+
+<p class="no-results">Nothing found! Try changing filters.</p>
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>

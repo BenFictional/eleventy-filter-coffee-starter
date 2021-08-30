@@ -1,4 +1,8 @@
-<li class="project card {{ post.data.project_type }}">
+<li class="project card {{ post.data.project_type }} 
+  {% for item in post.data.media %}
+    {{ item }}
+  {% endfor %}
+">
 
       {# HEADER #}
       <ul class="project-meta">

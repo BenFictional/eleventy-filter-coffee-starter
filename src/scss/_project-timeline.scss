@@ -1,0 +1,67 @@
+// PROJECTS
+.card {
+    background-color: var(--surface-emphasis);
+    display: flex;
+    flex-direction: column;
+    max-width: 45ch;
+  }
+  
+  // Nav filters
+  .filters ul {
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   margin-bottom: $unit-med;
+  
+   li { 
+     margin: 0 $unit-sml;
+     text-transform: capitalize;
+     font-family: $mono-font;
+     }
+
+    button {
+        background-color: $gray;
+
+        &.is-checked {
+            background-color: var(--element);
+        }
+    }
+
+  }
+  
+  .project-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary);
+    color: $light;
+    padding: $unit-sml $unit-med;
+  
+    li:first-of-type {
+      text-transform: uppercase;
+    }
+  }
+  
+  .project-meta,
+  .media-list {
+    font-family: $mono-font;
+  }
+  
+  .project-text {
+    padding: $unit-med;
+  }
+  
+  .project.art .project-meta {
+    background-color: var(--primary);
+  }
+  .project.design .project-meta {
+    background-color: var(--secondary);
+  }
+  .project.life .project-meta {
+    background-color: var(--tertiary);
+  }
+
+  .no-results {
+
+      &.visible { background: red; }
+  }
