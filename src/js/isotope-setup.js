@@ -13,37 +13,65 @@ imagesLoaded( grid, function() {
     }
   });
 
-  // bind filter button click
-  var filtersElem = document.querySelector('.timeline-filter');
-  filtersElem.addEventListener( 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, 'button' ) ) {
-      return;
-    }
-    var filterValue = event.target.getAttribute('data-filter');
-    // use matching filter function
-    filterValue = filterValue;
-    iso.arrange({ filter: filterValue });
-  });
+ // store filter for each group
+ var filters = {};
 
-  // change is-checked class on buttons
-var buttonGroups = document.querySelectorAll('.timeline-filter');
-for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-  var buttonGroup = buttonGroups[i];
-  radioButtonGroup( buttonGroup );
-}
-
-function radioButtonGroup( buttonGroup ) {
-  buttonGroup.addEventListener( 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, 'button' ) ) {
-      return;
-    }
-    buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-    event.target.classList.add('is-checked');
-  });
-}
-
-}); // end imageLoaded
-
+ var filtersElem = document.querySelector('.filters');
+ filtersElem.addEventListener( 'click', function( event ) {
+   // check for only button clicks
+  //  var isButton = event.target.classList.contains('button');
+   if ( !matchesSelector( event.target, 'button' ) ) {
+          return;
+        }
+ 
+   var buttonGroup = fizzyUIUtils.getParent( event.target, '.button-group' );
+   var filterGroup = buttonGroup.getAttribute('data-filter-group');
+   // set filter for group
+   filters[ filterGroup ] = event.target.getAttribute('data-filter');
+   // combine filters
+   var filterValue = concatValues( filters );
+   // set filter for Isotope
+   iso.arrange({ filter: filterValue });
   
+     // No results check
+  //  var noResults = document.querySelector('.no-results');
+  //  if ( grid.childNodes.length > 0) // Children exist, they are display: none
+  //   { noResults.classList.remove('visible');}
+  //  else 
+  //  { noResults.classList.add('visible');}
+
+ });
+ 
+ // change is-checked class on buttons
+ var buttonGroups = document.querySelectorAll('.button-group');
+ 
+ for ( var i=0; i < buttonGroups.length; i++ ) {
+   var buttonGroup = buttonGroups[i];
+   var onButtonGroupClick = getOnButtonGroupClick( buttonGroup );
+   buttonGroup.addEventListener( 'click', onButtonGroupClick );
+ }
+ 
+ function getOnButtonGroupClick( buttonGroup ) {
+   return function( event ) {
+     // check for only button clicks
+    //  var isButton = event.target.classList.contains('button');
+     if ( !matchesSelector( event.target, 'button' ) ) {
+      return;
+    }
+     var checkedButton = buttonGroup.querySelector('.is-checked');
+     checkedButton.classList.remove('is-checked')
+     event.target.classList.add('is-checked');
+
+     console.log("button state changed");
+   }
+ }
+ 
+ // flatten object by concatting values
+ function concatValues( obj ) {
+   var value = '';
+   for ( var prop in obj ) {
+     value += obj[ prop ];
+   }
+   return value;
+ }
+}); // end imageLoaded
