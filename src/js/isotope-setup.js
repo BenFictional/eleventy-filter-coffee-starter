@@ -3,6 +3,15 @@
 var grid = document.querySelector('.timeline');
 var iso;
 
+// Hash function
+function getHashFilter() {
+  var hash = location.hash;
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
+
+// Primary Isotope settings
 imagesLoaded( grid, function() {
   // init Isotope after all images have loaded
   iso = new Isotope( grid, {
@@ -16,10 +25,13 @@ imagesLoaded( grid, function() {
  // store filter for each group
  var filters = {};
 
+ // Is Isotope running? 
+ var isIsotopeInit = false;
+
+ // Filter on button click
  var filtersElem = document.querySelector('.filters');
  filtersElem.addEventListener( 'click', function( event ) {
    // check for only button clicks
-  //  var isButton = event.target.classList.contains('button');
    if ( !matchesSelector( event.target, 'button' ) ) {
           return;
         }
@@ -32,17 +44,18 @@ imagesLoaded( grid, function() {
    var filterValue = concatValues( filters );
    // set filter for Isotope
    iso.arrange({ filter: filterValue });
-  
    
-     // No results check
-    var noResults = document.querySelector('.no-results');
-    
-    if (iso.filteredItems.length == 0) {
-      noResults.classList.add('visible');
-    }
-    else {
-      noResults.classList.remove('visible');
-    }  
+   // Set hash and remove period from string
+   location.hash = 'filter=' + encodeURIComponent( filterValue.replace('.', '') );
+   
+  // No results check
+  var noResults = document.querySelector('.no-results');
+  if (iso.filteredItems.length == 0) {
+    noResults.classList.add('visible');
+  }
+  else {
+    noResults.classList.remove('visible');
+  }  
 
  });
  
@@ -65,6 +78,13 @@ imagesLoaded( grid, function() {
      var checkedButton = buttonGroup.querySelector('.is-checked');
      checkedButton.classList.remove('is-checked')
      event.target.classList.add('is-checked');
+
+     // Hash Update
+     var hashFilter = getHashFilter();
+    if ( !hashFilter && isIsotopeInit ) {
+      return;
+    }
+    isIsotopeInit = true;
    }
  }
  
