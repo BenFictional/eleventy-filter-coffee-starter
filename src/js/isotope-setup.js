@@ -33,12 +33,16 @@ imagesLoaded( grid, function() {
    // set filter for Isotope
    iso.arrange({ filter: filterValue });
   
+   
      // No results check
-  //  var noResults = document.querySelector('.no-results');
-  //  if ( grid.childNodes.length > 0) // Children exist, they are display: none
-  //   { noResults.classList.remove('visible');}
-  //  else 
-  //  { noResults.classList.add('visible');}
+    var noResults = document.querySelector('.no-results');
+    
+    if (iso.filteredItems.length == 0) {
+      noResults.classList.add('visible');
+    }
+    else {
+      noResults.classList.remove('visible');
+    }  
 
  });
  
@@ -61,8 +65,6 @@ imagesLoaded( grid, function() {
      var checkedButton = buttonGroup.querySelector('.is-checked');
      checkedButton.classList.remove('is-checked')
      event.target.classList.add('is-checked');
-
-     console.log("button state changed");
    }
  }
  
