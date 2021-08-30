@@ -62,6 +62,6 @@
   }
 
   .no-results {
-
-      &.visible { background: red; }
+      display: none;
+      &.visible { display: block; }
   }
