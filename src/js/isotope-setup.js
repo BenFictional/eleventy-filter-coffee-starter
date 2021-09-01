@@ -17,8 +17,10 @@ imagesLoaded( grid, function() {
   iso = new Isotope( grid, {
     itemSelector: '.project',
     percentPosition: true,
-    masonry: {
-      columnWidth: 100
+    layoutMode: 'cellsByRow',
+    cellsByRow: {
+      columnWidth: '.project-sizer',
+      rowHeight: '.project-sizer'
     }
   });
 

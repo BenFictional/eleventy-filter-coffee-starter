@@ -1,4 +1,4 @@
-nav {
+nav.primary-nav {
     width: 100%;
     display: grid;
     // grid-template-columns: auto auto 1fr;
@@ -16,7 +16,6 @@ nav {
 
     a.nav-link { 
         text-transform: uppercase;
-        font-size: $h5-size;
     }
 }
 
@@ -94,6 +93,7 @@ nav {
 
 .color-mode__btn {
     font-size: $base-font-size / $ratio;
+    margin-top: -0.33rem;
 }
 .dark--hidden {
     background-color: var(--element);

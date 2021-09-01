@@ -33,7 +33,7 @@
   </head>
   <body class="light-theme">
     {% include "partials/navigation.njk" %}
-    <main>
+    <main class="{{ title | lower }}">
     {% block content %}{% endblock%}
     </main>
     {% include "partials/footer.njk" %}

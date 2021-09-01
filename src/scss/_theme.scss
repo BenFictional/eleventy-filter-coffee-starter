@@ -4,11 +4,16 @@ $light: #fefefe;
 $dark: #332A32;
 $gray: #BFBEBD;
 $light-gray: #E5E5E5;
+$dark-gray: #5c595c;
 $primary: #B4422B;
 $primary-light: lighten($primary, 30%);
 $primary-dark: darken($primary, 15%);
 $secondary: #2B9DB4;
+$secondary-light: lighten($secondary, 30%);
+$secondary-dark: darken($secondary, 15%);
 $tertiary: #8F3C7E;
+$tertiary-light: lighten($tertiary, 30% );
+$tertiary-dark: darkend($tertiary, 15%);
 
 /* Define dark and light palettes with CSS variables */
 
@@ -18,11 +23,18 @@ $tertiary: #8F3C7E;
   --surface-emphasis: #{ $light };
   --element: #{ $dark };
   --element-subtle: #{ $gray };
+
   --primary: #{ $primary };
-  --primary-light: #{ $primary-light };
-  --primary-dark: #{ $primary-dark };
+  --primary-soft: #{ $primary-light };
+  --primary-emphasis: #{ $primary-dark };
+
   --secondary: #{ $secondary };
+  --secondary-soft: #{ $secondary-light };
+  --secondary-emphasis: #{ $secondary-dark };
+
   --tertiary: #{ $tertiary };
+  --tertiary-soft: #{ $tertiary-light };
+  --tertiary-emphasis: #{ $tertiary-dark };
 }
 
 /* Dark Mode */
@@ -30,12 +42,19 @@ $tertiary: #8F3C7E;
   --surface: #{ $dark };
   --surface-emphasis: #{ $gray };
   --element: #{ $paper };
-  --element-subtle: #{ $light-gray };
+  --element-subtle: #{ $dark-gray };
+
   --primary: #{ $primary };
-  --primary-light: #{ $primary-light };
-  --primary-dark: #{ $primary-dark };
+  --primary-soft: #{ $primary-dark };
+  --primary-emphasis: #{ $primary-light };
+
   --secondary: #{ $secondary };
+  --secondary-soft: #{ $secondary-dark };
+  --secondary-emphasis: #{ $secondary-light };
+
   --tertiary: #{ $tertiary };
+  --tertiary-soft: #{ $tertiary-dark };
+  --tertiary-emphasis: #{ $tertiary-light };
 }
 
 // BASE COLORS
@@ -68,6 +87,7 @@ $global-border: $unit-sml;
 // BREAKPOINTS
 $breakpoint-med: 640px;
 $breakpoint-lrg: 1000px;
+$breakpoint-xl: 1600px;
 
 @mixin breakpoint($point) {
   @if $point == med {
@@ -76,6 +96,9 @@ $breakpoint-lrg: 1000px;
   @if $point == lrg {
     @media(min-width: $breakpoint-lrg) { @content; }
   } 
+  @if $point == xl {
+    @media(min-width: $breakpoint-xl) { @content; }
+  } 
 }
 
 // BUTTONS
@@ -83,7 +106,6 @@ button {
   background-color: $primary;
   color: $light;
   max-width: 20ch;
-  border-radius: $global-border;
   border: none;
   padding: $unit-sml;
   text-transform: uppercase;
@@ -91,7 +113,8 @@ button {
   font-size: 18px;
   cursor: pointer;
   &:hover {
-    background-color: $primary-dark;
+    // background-color: $primary-dark;
+    opacity: 0.85;
   }
 }
 

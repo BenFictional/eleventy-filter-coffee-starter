@@ -8,30 +8,37 @@
 {{ content | safe}}
 </article>
 
-<nav class="filters">
-  {# Set for all #}
-  {% set postslist = collections.projects %}
+{# Set for all #}
+{% set postslist = collections.projects %}
 
-    <label>Type:</label>
-    <ul class="button-group" data-filter-group="project-type">
+{# FILTER BUTTONS #}
+<nav class="filters">
+    <div class="filter-item">
+      <label>Type:</label>
+      <ul class="button-group" data-filter-group="project-type">
       <li><button class="is-checked" data-filter="">All</button></li>
       {% for project_type in postslist | uniqueTypes %}
-        <li><button href="#" class="filter-button" data-filter=".{{ project_type }}">{{ project_type }}</button></li>
+        <li><button href="#" class="filter-button {{ project_type }}" data-filter=".{{ project_type }}">{{ project_type }}</button></li>
       {% endfor %}
     </ul>
+    </div>
     
-    <label>Media:</label>
-    <ul class="button-group" data-filter-group="media">
-      <li><button class="is-checked" data-filter="">All</button></li>
-    {% for media in postslist | uniqueMedia %}
-      <li><button href="#" class="filter-button" data-filter=".{{ media }}">{{ media }}</button></li>
-    {% endfor %}
-    </ul>  
-
+    <div class="filter-item">
+      <label>Media:</label>
+      <ul class="button-group" data-filter-group="media">
+        <li><button class="is-checked" data-filter="">All</button></li>
+      {% for media in postslist | uniqueMedia %}
+        <li><button href="#" class="filter-button {{ media }}" data-filter=".{{ media }}">{{ media }}</button></li>
+      {% endfor %}
+      </ul>  
+    </div>
 </nav>
 
+{# PROJECT TIMELINE #}
 <ul class="timeline">
  
+ <li class="project-sizer"></li>
+
   {% for post in postslist %}
     
        {% include "partials/project-card.njk" %}
@@ -39,10 +46,14 @@
   {% endfor %}
 </ul>
 
-<p class="no-results">Nothing found! Try changing filters.</p>
+<div class="no-results">
+  <h2>Nothing found!</h2>
+  <p>Try changing filters.</p>
+</div>
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="/js/cells-by-row-min.js"></script>
 <script src="/js/isotope-setup-min.js"></script>
 
 {% endblock %}
