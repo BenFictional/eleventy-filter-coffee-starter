@@ -9,15 +9,16 @@
         {# TYPE #}
         <li>{{ post.data.project_type }}</li>
 
-        {# YEAR #}
-        <li> <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | yearOnly }}</time></li>
-
         {# LOCATION #}
-        <li>{{ post.data.location }}</li>
+        <li>{{ post.data.location }}, </li>
+
+        {# YEAR #}
+        <li><time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | yearOnly }}</time></li>
+
       </ul>
 
       {# IMAGE #}
-      <img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}">
+      <a href ="{{ post.url | url }}"><img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}"></a>
 
       <div class="project-text">
       

@@ -2,10 +2,12 @@
 
   {% for post in postslist %}
     <li>
-      <img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}">
-      <a class="post-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-      <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      <span class="post-description">{{ post.data.description }}</span>
+      <a class="post-image" href="{{ post.url | url }}"><img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}"></a>
+      <div class="post-text">
+        <a class="post-title" href="{{ post.url | url }}"><h2>{{ post.data.title }}</h2></a>
+        <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <p class="post-description">{{ post.data.description }}</p>
+      </div>
     </li>
   {% endfor %}
 </ul>

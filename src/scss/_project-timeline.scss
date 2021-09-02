@@ -8,17 +8,22 @@
     @include breakpoint(lrg) {
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
   }
 
   .filter-item {
     display: grid;
-    grid-template-columns: 5ch auto;
+    grid-template-columns: 6ch auto;
     margin-bottom: $unit-med;
     padding: 0 $unit-med 0 $unit-med;
   }
 
-  .filter-item label { margin-top: 0.5ch; }
+  .filter-item label { 
+    margin-top: 0.25ch;
+    margin-right: 1ch;
+    text-align: right;
+   }
   .filters ul {
    display: flex;
    flex-direction: row;
@@ -36,7 +41,9 @@
         border-radius: 0;
         outline: 1px solid var(--surface);
         font-weight: normal;
-        padding: 0.25rem $unit-sml;
+        padding: $unit-sml;
+        font-size: $small-font-size;
+        line-height: 1;
 
         &.is-checked {
             background-color: var(--element);
@@ -54,8 +61,9 @@
   $nudge-sml: 9rem;
   $nudge-lrg: 27rem;
 
-  .proejcts ul.timeline {
+  .projects ul.timeline {
     padding-bottom: $nudge-sml;
+    box-shadow: inset 0 5px 15px -5px rgba(0,0,0,.2);
   }
   // INDIVIDUAL CARDS
   .card {
@@ -63,19 +71,25 @@
     display: flex;
     flex-direction: column;
     max-width: 40ch;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
   }
 
   .project-sizer, .project { height: 90vh; }
 
   .project, .project-sizer {
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 3rem);
     margin: $unit-med;
   }
 
   // TWO COLUMNS
   @include breakpoint(med) {
 
-    .projects ul.timeline { margin-top: -$unit-lrg; }
+    .projects ul.timeline { 
+      background-image: url('/assets/timeline.svg'); 
+      background-position: center;
+      background-repeat: repeat-y;
+      background-size: 44px;
+    }
 
     .project-sizer { height: 45rem; }
 
@@ -93,17 +107,16 @@
   // THREE COLUMNS
   @include breakpoint(xl) {
     .projects ul.timeline { 
-      margin-top: -$unit-lrg;
+      // margin-top: -$unit-lrg;
       padding-bottom: $nudge-lrg;
      }
 
     .project, .project-sizer { width: calc(33.33% - 2rem); }
-    .project-sizer { height: 60rem; }
+    .project-sizer { height: 55rem; }
 
     .project {
       &:nth-of-type(odd) { transform: none; }
-      &:nth-of-type(3n+0) { transform: translateY($nudge-lrg); outline: 5px solid blue; }
-      &:nth-of-type(3n+0) { outline: 5px solid red; }
+      &:nth-of-type(3n+0) { transform: translateY($nudge-lrg); }
      }
 
   }
@@ -111,13 +124,19 @@
   .project-meta {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     background-color: var(--primary);
     color: $light;
     padding: $unit-sml $unit-med;
-  
+    
+    
     li:first-of-type {
       text-transform: uppercase;
+      margin-right: $unit-med;
+    }
+
+    li:nth-of-type(2) {
+      margin-left: auto;
+      margin-right: 1ch;
     }
   }
   

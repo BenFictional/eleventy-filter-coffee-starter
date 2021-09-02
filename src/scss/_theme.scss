@@ -1,10 +1,10 @@
 // COLOR
 $paper: #FDF6EB;
 $light: #fefefe;
-$dark: #332A32;
-$gray: #BFBEBD;
+$dark: #2D272C;
+$gray: #B6B2AE;
 $light-gray: #E5E5E5;
-$dark-gray: #5c595c;
+$dark-gray: #484448;
 $primary: #B4422B;
 $primary-light: lighten($primary, 30%);
 $primary-dark: darken($primary, 15%);
@@ -40,19 +40,19 @@ $tertiary-dark: darkend($tertiary, 15%);
 /* Dark Mode */
 :root[color-mode="dark"] {
   --surface: #{ $dark };
-  --surface-emphasis: #{ $gray };
+  --surface-emphasis: #{ $dark-gray };
   --element: #{ $paper };
   --element-subtle: #{ $dark-gray };
 
-  --primary: #{ $primary };
+  --primary: #{ darken($primary, 5%) };
   --primary-soft: #{ $primary-dark };
   --primary-emphasis: #{ $primary-light };
 
-  --secondary: #{ $secondary };
+  --secondary: #{ darken($secondary, 5%) };
   --secondary-soft: #{ $secondary-dark };
   --secondary-emphasis: #{ $secondary-light };
 
-  --tertiary: #{ $tertiary };
+  --tertiary: #{ darken($tertiary, 5%) };
   --tertiary-soft: #{ $tertiary-dark };
   --tertiary-emphasis: #{ $tertiary-light };
 }
@@ -69,7 +69,7 @@ $header-font: Rubik, Helvetica, sans-serif;
 $mono-font: Overpass Mono, Inconsolata, Consolas, monospace;
 $ratio: 1.25;  // Major third
 $base-font-size: 18px;
-
+$small-font-size: 16px;
 $h6-size: $base-font-size;
 $h5-size: $base-font-size * $ratio;
 $h4-size: $h5-size * $ratio;

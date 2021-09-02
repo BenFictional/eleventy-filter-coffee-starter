@@ -41,9 +41,9 @@ nav.primary-nav {
 // Desktop menu
 @include breakpoint(med) {
 
-    nav {
+    nav.primary-nav {
         grid-template-columns: auto 1fr;
-    }
+    
     .nav-menu {
         opacity: 1;
         max-height: none;
@@ -52,25 +52,27 @@ nav.primary-nav {
         padding: 0;
     }
 
-    .nav-item {
-        height: 1rem; 
+        .nav-item {
+            height: 1rem; 
 
-        a.nav-link { 
-            font-size: $base-font-size;
-            line-height: 1rem;
-         }
+            a.nav-link { 
+                font-size: $base-font-size;
+                line-height: 1rem;
+            }
 
-        &:first-of-type { margin-left: auto; }
-        &:last-of-type { 
-            margin: -$unit-sml $unit-med 0 auto;
-         }
+            &:first-of-type { margin-left: auto; }
+            &:last-of-type { 
+                margin: -$unit-sml $unit-med 0 auto;
+            }
+        }
     }
-    
 }
 
 .site-title{
-    font-size: $h5-size;
-    // margin-right: $unit-lrg;
+    font-size: clamp($h5-size, 3vw, $h4-size);
+    @include breakpoint(lrg) {
+        margin-left: $unit-med;
+    }
 }
 
 .nav-toggle {
