@@ -44,7 +44,7 @@ module.exports = (config) => {
     config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
-    }).toFormat("dd-MM-yy");
+    }).toLocaleString(DateTime.DATE_MED);
   });
 
   config.addFilter("yearOnly", dateObj => {

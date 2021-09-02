@@ -14,6 +14,7 @@ $secondary-dark: darken($secondary, 15%);
 $tertiary: #8F3C7E;
 $tertiary-light: lighten($tertiary, 30% );
 $tertiary-dark: darkend($tertiary, 15%);
+$accent: #41A491;
 
 /* Define dark and light palettes with CSS variables */
 
@@ -35,6 +36,8 @@ $tertiary-dark: darkend($tertiary, 15%);
   --tertiary: #{ $tertiary };
   --tertiary-soft: #{ $tertiary-light };
   --tertiary-emphasis: #{ $tertiary-dark };
+
+  --accent: #{ $accent };
 }
 
 /* Dark Mode */
@@ -55,6 +58,7 @@ $tertiary-dark: darkend($tertiary, 15%);
   --tertiary: #{ darken($tertiary, 5%) };
   --tertiary-soft: #{ $tertiary-dark };
   --tertiary-emphasis: #{ $tertiary-light };
+  --accent: #{ darken($accent, 5%) };
 }
 
 // BASE COLORS

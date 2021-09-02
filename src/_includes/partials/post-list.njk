@@ -1,13 +1,17 @@
 <ul class="post-archive">
 
   {% for post in postslist %}
-    <li>
+    <li class="post-item">
+
       <a class="post-image" href="{{ post.url | url }}"><img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}"></a>
+
       <div class="post-text">
         <a class="post-title" href="{{ post.url | url }}"><h2>{{ post.data.title }}</h2></a>
+        <span class="post-category {{ post.data.category }}">{{ post.data.category }}</span>
         <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
         <p class="post-description">{{ post.data.description }}</p>
       </div>
+
     </li>
   {% endfor %}
 </ul>

@@ -14,7 +14,7 @@
 {# FILTER BUTTONS #}
 <nav class="filters">
     <div class="filter-item">
-      <label>Type:</label>
+      <span>Type:</span>
       <ul class="button-group" data-filter-group="project-type">
       <li><button class="is-checked" data-filter="">All</button></li>
       {% for project_type in postslist | uniqueTypes %}
@@ -24,7 +24,7 @@
     </div>
     
     <div class="filter-item">
-      <label>Media:</label>
+      <span>Media:</span>
       <ul class="button-group" data-filter-group="media">
         <li><button class="is-checked" data-filter="">All</button></li>
       {% for media in postslist | uniqueMedia %}

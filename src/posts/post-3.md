@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.html
-title: My first post
+title: Yet another post.
 description: Small batch tousled you probably haven't heard of them four loko post-ironic.
-date: 2020-08-01
+date: 2020-09-01
 featured_image: /images/yak.jpg
 category: 
-    - tutorial
+    - writing
 
 ---
 Hello, here is the body of the post.

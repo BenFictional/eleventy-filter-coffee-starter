@@ -13,6 +13,10 @@ article {
   max-width: 60ch;
   padding: $unit-med;
   margin: 0 auto;
+
+  &.wide {
+    max-width: 75ch;
+  }
 }
 
 .page-title {
@@ -30,22 +34,44 @@ article {
 }
 
 // Blog page
-.post-archive li {
-  padding: $unit-med;
+.post-item {
+  padding: $unit-lrg $unit-med;
   display: flex;
   border-bottom: 1px solid $light-gray;
   &:last-of-type {
     border-bottom: none;
   }
-  .post-title {
-    flex: 1;
+}
+
+.post-image {
+  max-width: 30ch;
+  margin-right: $unit-med;
+}
+
+.post-title h2 { 
+  margin: 0 0 $unit-med;
+}
+.post-category { 
+  text-transform: uppercase;
+  margin-right: $unit-med;
+  font-family: $mono-font;
+  color: $light;
+  padding: $unit-sml;
+  font-size: $small-font-size;
+  
+  &.tutorial {
+    background-color: var(--tertiary);
   }
-  .post-date {
-    flex: 1;
+  &.news {
+    background-color: var(--secondary);
   }
-  .post-description {
-    flex: 2;
+  &.writing {
+    background-color: var(--accent);
   }
+}
+.post-description {
+  display: block;
+  margin-top: $unit-med;
 }
 
 // Footer
