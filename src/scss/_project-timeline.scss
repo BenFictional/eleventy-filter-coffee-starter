@@ -5,10 +5,17 @@
  
  // Nav filters
   .filters {
+    padding-top: $unit-med;
+
     @include breakpoint(lrg) {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background-color: var(--surface);
+      box-shadow: 0 15px 15px -5px rgba(0,0,0,.1);
     }
   }
 
@@ -51,9 +58,9 @@
         }
     }
 
-    button.art.is-checked { background-color: var(--primary); }
-    button.design.is-checked { background-color: var(--secondary); }
-    button.life.is-checked { background-color: var(--tertiary); }
+    button.art.is-checked { background-color: var(--primary); color: $light; }
+    button.design.is-checked { background-color: var(--secondary); color: $light; }
+    button.life.is-checked { background-color: var(--tertiary); color: $light;}
     
   }
 
@@ -62,8 +69,10 @@
   $nudge-lrg: 27rem;
 
   .projects ul.timeline {
+    position: relative;
+    z-index: 1;
     padding-bottom: $nudge-sml;
-    box-shadow: inset 0 5px 15px -5px rgba(0,0,0,.2);
+    margin-top: -$unit-med;
   }
   // INDIVIDUAL CARDS
   .card {

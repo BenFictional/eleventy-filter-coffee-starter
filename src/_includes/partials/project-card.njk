@@ -10,7 +10,9 @@
         <li>{{ post.data.project_type }}</li>
 
         {# LOCATION #}
-        <li>{{ post.data.location }}, </li>
+        {% if post.data.location %}
+          <li>{{ post.data.location }}, </li>
+        {% endif %}
 
         {# YEAR #}
         <li><time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | yearOnly }}</time></li>

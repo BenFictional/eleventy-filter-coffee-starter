@@ -19,19 +19,14 @@ article {
   }
 }
 
+section {
+  padding: clamp($unit-med, 5vw, 12rem);
+}
+
 .page-title {
   text-align: center;
 }
 
-// Homepage
-.hero {
-  width: 100%;
-  margin: 0;
-  display: grid;
-  place-content: center;
-  min-height: 50vh;
-  background-color: $secondary;
-}
 
 // Blog page
 .post-item {

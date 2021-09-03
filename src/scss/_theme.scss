@@ -6,14 +6,14 @@ $gray: #B6B2AE;
 $light-gray: #E5E5E5;
 $dark-gray: #484448;
 $primary: #B4422B;
-$primary-light: lighten($primary, 30%);
-$primary-dark: darken($primary, 15%);
+$primary-light: lighten($primary, 7%);
+$primary-dark: darken($primary, 5%);
 $secondary: #2B9DB4;
 $secondary-light: lighten($secondary, 30%);
 $secondary-dark: darken($secondary, 15%);
 $tertiary: #8F3C7E;
 $tertiary-light: lighten($tertiary, 30% );
-$tertiary-dark: darkend($tertiary, 15%);
+$tertiary-dark: darken($tertiary, 5%);
 $accent: #41A491;
 
 /* Define dark and light palettes with CSS variables */
@@ -55,7 +55,7 @@ $accent: #41A491;
   --secondary-soft: #{ $secondary-dark };
   --secondary-emphasis: #{ $secondary-light };
 
-  --tertiary: #{ darken($tertiary, 5%) };
+  --tertiary: #{ $tertiary };
   --tertiary-soft: #{ $tertiary-dark };
   --tertiary-emphasis: #{ $tertiary-light };
   --accent: #{ darken($accent, 5%) };
