@@ -4,6 +4,7 @@ title: A project with a really long title that makes no sense.
 description:  Chicharrones neutra listicle beard snackwave quinoa viral squid tacos single-origin coffee
 date: 2020-01-01
 location: Baltimore
+featured_project: true
 featured_image: /images/yak.jpg
 featured_alt: A photo of a yak.
 tags: 

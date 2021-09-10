@@ -64,6 +64,16 @@
     
   }
 
+    .card {
+      background-color: var(--surface-emphasis);
+      display: flex;
+      flex-direction: column;
+      max-width: 40ch;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+    }
+
+
+
   // TIMELINE
   $nudge-sml: 9rem;
   $nudge-lrg: 27rem;
@@ -73,21 +83,14 @@
     z-index: 1;
     padding-bottom: $nudge-sml;
     margin-top: -$unit-med;
-  }
-  // INDIVIDUAL CARDS
-  .card {
-    background-color: var(--surface-emphasis);
-    display: flex;
-    flex-direction: column;
-    max-width: 40ch;
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
-  }
 
-  .project-sizer, .project { height: 90vh; }
+    .project-sizer, .project { height: 90vh; }
 
-  .project, .project-sizer {
-    width: calc(100vw - 3rem);
-    margin: $unit-med;
+    .project, .project-sizer {
+      width: calc(100vw - 3rem);
+      margin: $unit-med;
+    }
+
   }
 
   // TWO COLUMNS
@@ -98,19 +101,18 @@
       background-position: center;
       background-repeat: repeat-y;
       background-size: 44px;
-    }
 
-    .project-sizer { height: 45rem; }
+      .project-sizer { height: 45rem; }
 
-    .project, .project-sizer { width: calc(50% - 2rem); }
+      .project, .project-sizer { width: calc(50% - 2rem); }
 
-    .project { 
-      height: auto; 
-      &:nth-of-type(odd) {
-        transform: translateY($nudge-sml);
+      .project { 
+        height: auto; 
+        &:nth-of-type(odd) {
+          transform: translateY($nudge-sml);
+        }
       }
     }
-    
   }
 
   // THREE COLUMNS
@@ -118,9 +120,8 @@
     .projects ul.timeline { 
       // margin-top: -$unit-lrg;
       padding-bottom: $nudge-lrg;
-     }
 
-    .project, .project-sizer { width: calc(33.33% - 2rem); }
+      .project, .project-sizer { width: calc(33.33% - 2rem); }
     .project-sizer { height: 55rem; }
 
     .project {
@@ -128,6 +129,7 @@
       &:nth-of-type(3n+0) { transform: translateY($nudge-lrg); }
      }
 
+     } // end timeline
   }
   
   .project-meta {
@@ -152,14 +154,17 @@
   .project-meta,
   .media-list {
     font-family: $mono-font;
+    font-size: $small-font-size;
   }
   
   .project-text {
     padding: $unit-med $unit-med $unit-lrg;
 
-    h2 {  
+    .project-title {  
       font-size: $h3-size;
       margin-bottom: $unit-med;
+      line-height: 1;
+      margin-bottom: 0.5em;
      }
   }
 

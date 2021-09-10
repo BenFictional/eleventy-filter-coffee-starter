@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/home.html'
 ---
+{# HERO #}
 <section class="hero">
     <div class="hero-text">
         <p>I'm baby squid four loko air plant, mixtape direct trade tote bag viral organic before they sold out pabst austin vice kombucha street art slow-carb.</p>
     </div>
     
-
 <div class="hero-art">
     <figure class="blob">
         <img src="/assets/blob-red.svg">
@@ -21,7 +21,34 @@ layout: 'layouts/home.html'
         <figcaption>Educator</figcaption>
     </figure>
 </div>
+</section>
 
+{# PROJECTS #}
+<section class="feat-projects">
+<h2>Projects</h2>
+
+{# Set for all #}
+{% set postslist = collections.featuredProjects %}
+<ul class="feat-projects-list card-list">
+ {% for post in postslist %}
+    {# Limit to three projects #}
+    {% if loop.index0 < 3 %}
+       {% include "partials/project-card.njk" -%}
+    {% endif %}
+  {% endfor %}
+
+  <li><a class="button">View all proejcts</a></li>
+</ul>
+</section>
+
+<section>
+<aside class="cool-picks">
+<div class="cool-header"></div>
+<div class="cool-content">
+    <h2>Cool Picks</h2>
+</div>
+
+</aside>
 </section>
 
 

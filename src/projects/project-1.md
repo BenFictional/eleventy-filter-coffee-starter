@@ -6,6 +6,7 @@ date: 2020-01-01
 location: Baltimore
 featured_image: /images/yak.jpg
 featured_alt: A photo of a yak.
+featured_project: true
 tags: 
     - projects
 project_type:

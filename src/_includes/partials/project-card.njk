@@ -28,7 +28,7 @@
         {% if post.data.project_type.includes("life") %}
             <h2>{{ post.data.title }}</h2>
         {% else %}
-            <a class="post-title" href="{{ post.url | url }}"><h2>{{ post.data.title }}</h2></a>
+            <a class="project-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
         {% endif %}
 
         {# MEDIA #}

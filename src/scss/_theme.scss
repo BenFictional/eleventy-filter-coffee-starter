@@ -106,7 +106,7 @@ $breakpoint-xl: 1600px;
 }
 
 // BUTTONS
-button {
+button, .button {
   background-color: $primary;
   color: $light;
   max-width: 20ch;

@@ -94,6 +94,18 @@ module.exports = (config) => {
     return [...types]
   })
 
+  // Featured projects
+  config.addCollection('featuredProjects', collection => {
+    return collection.getFilteredByGlob('./src/projects/*.md')
+      .filter(
+        post => post.data.featured_project
+      )
+      .sort((a,b) => {
+        return a.data.post_weight - b.data.post_weight;
+      });
+   });
+   
+
 
   return {
     markdownTemplateEngine: 'njk',
