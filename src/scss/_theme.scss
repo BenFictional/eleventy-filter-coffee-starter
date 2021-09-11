@@ -80,6 +80,7 @@ $h4-size: $h5-size * $ratio;
 $h3-size: $h4-size * $ratio; 
 $h2-size: $h3-size * $ratio;
 $h1-size: $h2-size * $ratio;
+$jumbo-size: $h1-size * $ratio;
 
 // LAYOUT
 $unit-xsml: 0.25rem;
@@ -113,6 +114,7 @@ button, .button {
   border: none;
   padding: $unit-sml;
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
@@ -121,7 +123,6 @@ button, .button {
     opacity: 0.85;
   }
 }
-
 .icon-button {
   display: flex;
   flex-direction: row;
@@ -132,4 +133,12 @@ button, .button {
     width: 1.5em;
     margin-right: 0.25em;
    }
+}
+
+a.button:hover {
+  color: $light !important;
+}
+.button-lrg {
+  padding: 0.75rem $unit-med;
+  font-size:$h5-size;
 }
