@@ -7,4 +7,8 @@ eleventyNavigation:
 ---
 
 {% set postslist = collections.posts %}
-{% include "partials/post-list.njk" %}
+<ul class="post-archive">
+  {% for post in postslist %}
+    {% include "partials/post-card.njk" %}
+  {% endfor %}
+</ul>

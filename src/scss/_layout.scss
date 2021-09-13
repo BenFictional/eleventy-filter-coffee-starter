@@ -32,6 +32,7 @@ section {
 .post-item {
   padding: $unit-lrg $unit-med;
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid $light-gray;
   &:last-of-type {
     border-bottom: none;
@@ -40,11 +41,16 @@ section {
 
 .post-image {
   max-width: 30ch;
-  margin-right: $unit-med;
+  margin-bottom: $unit-med;
+  max-width: 100%;
+  img { width: 100%; }
 }
 
-.post-title h2 { 
+.post-title { 
+  font-size: $h3-size;
+  line-height: 1;
   margin: 0 0 $unit-med;
+  display: block;
 }
 .post-category { 
   text-transform: uppercase;
@@ -67,6 +73,17 @@ section {
 .post-description {
   display: block;
   margin-top: $unit-med;
+}
+
+@include breakpoint(med) {
+  .post-item {
+    flex-direction: row;
+    .post-image { 
+      margin-right: $unit-med;
+      margin-bottom: 0;
+      max-width: 30ch;
+     }
+  }
 }
 
 // Footer
