@@ -40,10 +40,9 @@ section {
 }
 
 .post-image {
-  max-width: 30ch;
-  margin-bottom: $unit-med;
   max-width: 100%;
-  img { width: 100%; }
+  margin-bottom: $unit-med;
+  img { max-width: 100%; }
 }
 
 .post-title { 
@@ -81,9 +80,13 @@ section {
     .post-image { 
       margin-right: $unit-med;
       margin-bottom: 0;
-      max-width: 30ch;
+      // max-width: 30ch;
      }
   }
+}
+
+.blog .post-image {
+  max-width: 30ch;
 }
 
 // Footer

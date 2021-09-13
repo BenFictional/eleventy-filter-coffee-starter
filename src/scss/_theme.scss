@@ -87,7 +87,9 @@ $unit-xsml: 0.25rem;
 $unit-sml: .5rem;
 $unit-med: 1rem;
 $unit-lrg: 3rem;
+$unit-xl: 6rem;
 $global-border: $unit-sml;
+$shadow: 1px 1px 6px rgba(0,0,0,0.15);
 
 // BREAKPOINTS
 $breakpoint-med: 640px;
