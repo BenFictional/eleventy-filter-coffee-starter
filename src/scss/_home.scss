@@ -8,7 +8,7 @@ section.base-grid {
     margin-bottom: clamp($unit-lrg, 15vh, 20rem);
     display: grid;
     grid-template-columns: $unit-med 1fr $unit-med;
-    gap: $unit-med;
+    gap: clamp($unit-med, 3vw, $unit-lrg);
 
     * { grid-column: 2 / 3; }
 
@@ -17,14 +17,12 @@ section.base-grid {
     }
     @include breakpoint(lrg) {
         grid-template-columns: $squishy-margin 1fr 1fr 1fr $squishy-margin;
-        grid-template-rows: $header-height auto auto 16rem;
         * { grid-column: auto; }
 
         *:not(.banner) { grid-row: 2 / 3; }
     }
     @include breakpoint(xl) {
         grid-template-columns: $squishy-margin 1fr .5fr .5fr 1fr $squishy-margin;
-        grid-template-rows: $header-height 2fr 1fr 1fr;
     }
 }
 
@@ -170,6 +168,13 @@ section.base-grid .banner {
 section.feat-projects {
     padding: 0;
 
+    @include breakpoint(lrg) {
+        grid-template-rows: $header-height auto auto 16rem;
+    }
+    @include breakpoint(xl) {
+        grid-template-rows: $header-height 2fr 1fr 1fr;
+    }
+
     h2 { 
         background: var(--primary);
         color: $light;
@@ -177,7 +182,9 @@ section.feat-projects {
         padding: $unit-med;
     }
 }
-.card-list {
+
+section.feat-projects .card-list {
+    grid-column: 2 / -1;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -185,7 +192,7 @@ section.feat-projects {
     
 
     .card { 
-        // margin: 0 $unit-med $unit-med; 
+        margin-right: 1.5rem;
         width: calc(100vw - 8rem);
         flex-shrink: 0;
         scroll-snap-align: center;
@@ -195,11 +202,12 @@ section.feat-projects {
 }
 
 @include breakpoint(med) {
-    .card-list {
+    section.feat-projects .card-list {
         display: contents;
         overflow-x: visible;
 
         .card { 
+            margin-right: 0;
             width: auto;
             max-width: 100%;
             &:last-of-type { margin-right: $unit-med; }
@@ -218,7 +226,7 @@ section.feat-projects {
         grid-column: 2 / 4;
         place-self: center;
     }
-    .card-list .card:first-of-type {
+    section.feat-projects .card-list .card:first-of-type {
         position: relative;
         margin-bottom: $unit-lrg + $unit-med;
 
@@ -236,7 +244,7 @@ section.feat-projects {
 } // end med
 
 @include breakpoint(lrg) {
-    ul.card-list {
+    section.feat-projects .card-list {
         .card:nth-of-type(1) {
             grid-column: 1 / 4;
             grid-row: 2 / 4;
@@ -307,27 +315,70 @@ section.feat-blog h2 {
 
 section.feat-blog {
 
-    @include breakpoint(lrg) {
-        .feat-blog-list {
-            grid-column: 2 / 4;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .feat-blog-list .post-item {
-            flex-direction: column;
+    .feat-blog-list {
+        display: contents;
 
-            .post-image { margin-bottom: $unit-med;}
+        .post-item { max-width: 30rem; }
+    }
+
+
+    .featured-pick {
+        border: 1px solid var(--element-subtle);
+        border-top: .5rem solid var(--tertiary);
+        padding: $unit-med;
+
+        h3 { margin-bottom: $unit-med; }
+
+        .pick-intro, .pick-archive { 
+            font-size: $small-font-size;
+            line-height: 1.25;
+         }
+
+        .pick-archive { 
+            margin-left: $unit-med;
         }
-    
-        .cool-picks {
-            grid-column: span 1;
+    }
+
+    @include breakpoint(med) {
+        .feat-blog-list {
+            .post-item:nth-of-type(1) {
+                grid-column: 2 / 3;
+                border: none;
+            }
+            .post-item:nth-of-type(2) {
+                grid-column: 3 / 4;
+            }
         }
+        .featured-pick {
+            grid-column: 2 / 4;
+        }
+    }
+    @include breakpoint(lrg) {
+        .featured-pick {
+            grid-column: 4 / 5;
+        }
+
     }
     @include breakpoint(xl) {
-        .feat-blog-list { grid-column: 2 / 5; }
-        .cool-picks {grid-column: 5 / 6;}
+        grid-template-rows: $header-height auto auto;
+
+        .feat-blog-list {
+            .post-item:nth-of-type(1) {
+                grid-column: 2 / 3;
+                grid-row: 2 / 4;
+                border: none;
+            }
+            .post-item:nth-of-type(2) {
+                grid-column: 3 / 5;
+                grid-row: 2 / 4;
+            }
+        }
+        .featured-pick {
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+        }
     }
-}
+} // end section
 
 
 

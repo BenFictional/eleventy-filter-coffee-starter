@@ -32,7 +32,11 @@ p {
 
 ul, ol {
     margin-left: 1em;
+    line-height: 1.25;
+    li { margin-bottom: .25rem; }
 }
+
+ul { list-style: square; }
 
 
 // DARK MODE

@@ -28,67 +28,6 @@ section {
 }
 
 
-// Blog page
-.post-item {
-  padding: $unit-lrg $unit-med;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid $light-gray;
-  &:last-of-type {
-    border-bottom: none;
-  }
-}
-
-.post-image {
-  max-width: 100%;
-  margin-bottom: $unit-med;
-  img { max-width: 100%; }
-}
-
-.post-title { 
-  font-size: $h3-size;
-  line-height: 1;
-  margin: 0 0 $unit-med;
-  display: block;
-}
-.post-category { 
-  text-transform: uppercase;
-  margin-right: $unit-med;
-  font-family: $mono-font;
-  color: $light;
-  padding: $unit-sml;
-  font-size: $small-font-size;
-  
-  &.tutorial {
-    background-color: var(--tertiary);
-  }
-  &.news {
-    background-color: var(--secondary);
-  }
-  &.writing {
-    background-color: var(--accent);
-  }
-}
-.post-description {
-  display: block;
-  margin-top: $unit-med;
-}
-
-@include breakpoint(med) {
-  .post-item {
-    flex-direction: row;
-    .post-image { 
-      margin-right: $unit-med;
-      margin-bottom: 0;
-      // max-width: 30ch;
-     }
-  }
-}
-
-.blog .post-image {
-  max-width: 30ch;
-}
-
 // Footer
 footer {
   width: 100%;

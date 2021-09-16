@@ -1,3 +1,4 @@
-<time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-
-{{ post.templateContent | safe }}
+<article class="cool-pick post-item">
+    <span class="boxed">Picked on {{ post.date | readableDate }}</span>
+    {{ post.templateContent | safe }}
+</article>
