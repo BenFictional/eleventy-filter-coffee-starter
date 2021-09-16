@@ -1,0 +1,18 @@
+<nav class="footer-nav flex items-center justify-between flex-wrap px-5 py-3 border-b">
+  {% set navPages = collections.all | eleventyNavigation %}
+
+
+  <ul class="nav-menu">
+    {% for entry in navPages %}
+      <li class="nav-item">
+        <a
+         href="{{ entry.url }}"
+         class="{{'current-page nav-link' if entry.url in page.url
+         else 'nav-link'}}">
+         {{ entry.title }}
+       </a>
+      </li>
+    {% endfor %}   
+ </ul>  
+
+</nav>

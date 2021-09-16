@@ -23,13 +23,13 @@ layout: 'layouts/home.html'
 </div>
 </section>
 
-{# PROJECTS #}
-<section class="feat-projects base-grid">
+{############  PROJECTS ##############}
+<section class="featured-projects base-grid">
 <h2 class="banner title-right">Projects</h2>
 
 {# Set for all #}
 {% set postslist = collections.featuredProjects %}
-<ul class="feat-projects-list card-list">
+<ul class="featured-projects-list card-list">
  {% for post in postslist %}
     {# Limit to three projects #}
     {% if loop.index0 < 3 %}
@@ -41,11 +41,12 @@ layout: 'layouts/home.html'
 <a class="project-cta button button-lrg">View all projects</a>
 </section>
 
-<section class="feat-blog base-grid">
+{############  BLOG ##############}
+<section class="featured-blog base-grid">
 
     <h2 class="banner title-left">The Latest</h2>
 
-    <ul class="feat-blog-list">
+    <ul class="featured-blog-list">
         {# Set for all #}
 {% set bloglist = collections.posts %}
  {% for post in bloglist %}
@@ -66,5 +67,31 @@ layout: 'layouts/home.html'
     </aside>
 </section>
 
+{############  DESIGN ##############}
 
+<section class="featured-design base-grid">
+    <h2 class="banner title-right">Services</h2>
+        <aside class="design-gallery">
+            {% img 'frenchpress.jpg', 'A generic image description' %}
+            {% img 'frenchpress.jpg', 'A generic image description' %}
+            {% img 'frenchpress.jpg', 'A generic image description' %}
+            {% img 'frenchpress.jpg', 'A generic image description' %}
+        </aside>
+        <div class="service">
+            <h3>Graphic Design</h3>
+            <ul>
+                <li>Some text about this subject.</li>
+                <li>Some text about this subject.</li>
+                <li>Some text about this subject.</li>
+            </ul>
+        </div>
+        <div class="service">
+            <h3>Websites</h3>
+            <ul>
+                <li>Some text about this subject.</li>
+                <li>Some text about this subject.</li>
+                <li>Some text about this subject.</li>
+            </ul>
+        </div>
+</section>
 
