@@ -59,13 +59,10 @@ layout: 'layouts/home.html'
     <aside class="cool-picks">
          <h3>Cool Picks</h3>
          <p>Banjo cronut bitters keytar direct trade coloring book raw denim slow-carb pinterest kickstarter. </p>
-         <ul class="cool-list">
-            <li>Art party seitan adaptogen post-ironic VHS. Literally flexitarian pok pok, man bun normcore wolf YOLO hoodie iPhone. </li>
-            <li>Pork belly before they sold out tilde dreamcatcher meh blue bottle marfa brooklyn man braid lumbersexual.</li>
-            <li>Art party seitan adaptogen post-ironic VHS. Literally flexitarian pok pok, man bun normcore wolf YOLO hoodie iPhone. </li>
-            <li>Pork belly before they sold out tilde dreamcatcher meh blue bottle marfa brooklyn man braid lumbersexual.</li>
-         </ul>
-      
+        {%- for link in collections.cool -%}
+            {{ link.templateContent | safe }}
+        {%- endfor -%}
+        <a href="#">Previous cool picks</a>
     </aside>
 </section>
 

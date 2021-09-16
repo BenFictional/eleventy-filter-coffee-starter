@@ -17,8 +17,6 @@ module.exports = (config) => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
-  config.addPassthroughCopy("js/color-mode.js");
-
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
@@ -104,7 +102,6 @@ module.exports = (config) => {
         return a.data.post_weight - b.data.post_weight;
       });
    });
-   
 
 
   return {

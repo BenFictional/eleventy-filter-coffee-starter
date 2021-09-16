@@ -1,0 +1,11 @@
+---
+title: Cool Picks
+layout: 'layouts/article.html'
+---
+
+{% set postslist = collections.cool %}
+<ul class="links-archive">
+  {% for post in postslist %}
+    {% include "partials/cool-pick.njk" %}
+  {% endfor %}
+</ul>
