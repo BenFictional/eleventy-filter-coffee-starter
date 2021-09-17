@@ -5,7 +5,7 @@ nav.primary-nav, nav.footer-nav {
     .nav-item {
         margin: 0 $unit-med $unit-sml;
     }
-    a { color: var(--element); }
+    
 
     a.nav-link { 
         text-transform: uppercase;
@@ -28,6 +28,8 @@ nav.primary-nav {
     align-items: center;
     position: relative;
 
+    a { color: var(--element); }
+    
     .nav-menu {
         max-height: 0;
         opacity: 0;
@@ -39,6 +41,8 @@ nav.primary-nav {
             opacity: 1;
             max-height: 1000px;   
           } 
+        
+        
     }
 }
 
@@ -64,13 +68,14 @@ nav.primary-nav {
                 font-size: $base-font-size;
                 line-height: 1rem;
             }
-
-            &:first-of-type { margin-left: auto; }
         }
     }
     
-    nav.primary-nav .nav-menu .nav-item:last-of-type { 
-        margin: -$unit-sml $unit-med 0 auto;
+    nav.primary-nav .nav-menu {
+        .nav-item:first-of-type { margin-left: auto; }
+        .nav-item:last-of-type { 
+            margin: -$unit-sml $unit-med 0 auto;
+        }
     }
 }
 

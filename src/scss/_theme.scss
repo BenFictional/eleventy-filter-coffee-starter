@@ -2,7 +2,7 @@
 $paper: #FDF6EB;
 $light: #fefefe;
 $dark: #2D272C;
-$gray: #B6B2AE;
+$gray: #dbd6d2;
 $light-gray: #E5E5E5;
 $dark-gray: #484448;
 $primary: #B4422B;
@@ -38,6 +38,7 @@ $accent: #41A491;
   --tertiary-emphasis: #{ $tertiary-dark };
 
   --accent: #{ $accent };
+  --link-color: #{ $primary };
 }
 
 /* Dark Mode */
@@ -58,7 +59,9 @@ $accent: #41A491;
   --tertiary: #{ $tertiary };
   --tertiary-soft: #{ $tertiary-dark };
   --tertiary-emphasis: #{ $tertiary-light };
+
   --accent: #{ darken($accent, 5%) };
+  --link-color: #{ $secondary-light };
 }
 
 // BASE COLORS

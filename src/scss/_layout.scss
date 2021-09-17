@@ -32,8 +32,64 @@ section {
 footer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: $unit-lrg;
   flex-shrink: 0;
-  background-color: $light-gray;
+  background-color: var(--element-subtle);
+  text-align: center;
+}
+
+.social-wrapper { 
+  display: flex;
+  flex-direction: column;
+}
+.social-list { display: contents;}
+
+.social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $h5-size;
+
+  svg {
+    display: inline-block;
+    width: 3ch;
+  }
+}
+
+.footer-nav .nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: clamp($unit-med, 5vh, 5rem) 0;
+}
+
+nav.footer-nav, .copyright {
+  width: max(400px, 40vw);
+  margin: $unit-med auto;
+}
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: $small-font-size;
+
+}
+
+@include breakpoint(med) {
+  .social-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    li { margin-left: 2rem; margin-bottom: 0; }
+  }
+}
+
+@include breakpoint(lrg) {
+  .copyright {
+    flex-direction: row;
+    gap: $unit-med;
+  }
 }

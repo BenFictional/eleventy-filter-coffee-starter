@@ -316,7 +316,10 @@ section.featured-blog {
     .featured-blog-list {
         display: contents;
 
-        .post-item { max-width: 30rem; }
+        .post-item { 
+            max-width: 30rem;
+            grid-column: 2/3;
+         }
     }
 
 
