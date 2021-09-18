@@ -9,6 +9,9 @@ main {
 }
 
 // For pages with centered content
+
+
+
 article {
   max-width: 60ch;
   padding: $unit-med;
@@ -17,6 +20,25 @@ article {
   &.wide {
     max-width: 75ch;
   }
+
+  .align-wide {
+    margin: $align-wide;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-rows: repeat(auto-fit, 260px);
+    gap: $unit-sml;
+    grid-auto-flow: dense;
+    margin: $align-wide;
+
+    .portrait { grid-row: span 2; }
+  }
+}
+
+article > img {
+  margin: clamp($unit-med, 5vw, $unit-lrg) auto;
 }
 
 section {
@@ -26,6 +48,7 @@ section {
 .page-title {
   text-align: center;
 }
+
 
 
 // Footer

@@ -52,14 +52,17 @@ module.exports = (config) => {
   });
 
   // Image shortcode
-  config.addShortcode('img', function (path, alt) {
+  config.addShortcode('img', function (path, aspect, alt) {
+
+      // Can we leave 'aspect' undefined (and put it third?) 
+      var ratio = (aspect =="p") ? "portrait":"landscape";
 
       if (process.env.NODE_ENV === 'production') {
-      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://elated-varahamihira-719e35.netlify.app/images/${path}" alt="${alt}">`
+      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://elated-varahamihira-719e35.netlify.app/images/${path}" alt="${alt}" class="${ ratio }">`
       }
 
       else {
-      return `<img src="/images/${path}" alt="${alt}">`
+      return `<img src="/images/${path}" alt="${alt}" class="${ ratio }">`
       }
   })
 

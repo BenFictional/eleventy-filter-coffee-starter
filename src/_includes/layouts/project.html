@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+<article class="project-entry">
+    {# IMAGE #}
+    
+    <header class="align-wide">
+        <img class="featured-image" src="{{ featured_image}}" alt="{{ featured_alt }}">
+
+        <div class="project-meta">
+            {# Title #}
+        <h1 class="page-title"> {{ title }}</h1>
+
+        {# Type #}
+        <span class="project-type">{{ project_type }}</span>
+
+        {# Location #}
+        {% if location %}
+            <span>{{ location }},</span>
+        {% endif %}
+
+        {# Year #}
+        <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ date | yearOnly }}</time>
+
+         {# Media #}
+        <ul>
+            {% for item in media %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        </div>
+        
+    </header>
+    
+    {{ content | safe}}
+</article>
+{% endblock %}

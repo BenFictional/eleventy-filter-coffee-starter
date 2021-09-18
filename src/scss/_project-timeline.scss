@@ -135,11 +135,13 @@
   .project-meta {
     display: flex;
     flex-direction: row;
+    padding: $unit-sml $unit-med;
+  }
+
+  .card .project-meta {
     background-color: var(--primary);
     color: $light;
-    padding: $unit-sml $unit-med;
-    
-    
+
     li:first-of-type {
       text-transform: uppercase;
       margin-right: $unit-med;
@@ -149,12 +151,14 @@
       margin-left: auto;
       margin-right: 1ch;
     }
+    .project-meta, .media-list {
+      font-size: $small-font-size;
+    }
   }
   
   .project-meta,
   .media-list {
     font-family: $mono-font;
-    font-size: $small-font-size;
   }
   
   .project-text {
@@ -183,3 +187,78 @@
       display: none;
       &.visible { display: block; }
   }
+
+  //////// INDIVIDUAL PROJECTS ///////////
+
+  .project-entry header {
+    margin-top: 0;
+  }
+  .project-entry .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $unit-med;
+    justify-content: center;
+
+    h1 { 
+      flex-basis: 100%;
+      margin-bottom: $unit-med;
+     }
+
+    .project-type {
+      background-color: var(--primary);
+      color: $light;
+      text-transform: uppercase;
+      line-height: 1;
+      padding: $unit-sml;
+      transform:translateY(-0.25rem);
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0 $unit-lrg;
+    }
+
+    li { 
+      text-transform: capitalize;
+      margin-right: $unit-sml;
+
+      &:after {
+        content: "|";
+        margin-left: $unit-sml;
+        color: var(--element-subtle);
+      }
+      &:last-of-type:after { 
+        content: "";
+        margin-left: 0;
+       }
+
+     }
+  }
+
+  @include breakpoint(lrg) {
+
+    $project-margin: 5rem;
+
+    .project-entry header img {
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .project-entry header {
+      position: relative;
+      margin-bottom: $project-margin + $unit-lrg;
+
+      .page-title { text-align: left; }
+      .project-meta {
+        justify-content: flex-start;
+        position: absolute;
+        bottom: -$project-margin;
+        left: -$unit-med;
+        width: 75%;
+        background-color: var(--surface);
+      }
+    } 
+  }
+
