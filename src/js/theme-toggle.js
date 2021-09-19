@@ -30,7 +30,7 @@ if (window.CSS && CSS.supports("color", "var(--primary)")) {
 
 
 // MOBILE MENU 
-var menu = document.querySelector(".nav-menu");
+var menu = document.querySelector(".primary-nav > .nav-menu");
 var ham = document.querySelector(".nav-toggle");
 var xIcon = document.querySelector(".close");
 var menuIcon = document.querySelector(".open");
@@ -49,7 +49,7 @@ function toggleMenu() {
   }
 }
 
-var menuLinks = document.querySelectorAll(".nav-item")
+var menuLinks = document.querySelectorAll(".showMenu .nav-item")
 
 menuLinks.forEach(
   function (menuLink) {
