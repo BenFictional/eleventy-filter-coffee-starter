@@ -48,11 +48,3 @@ function toggleMenu() {
     menuIcon.style.display = "none";
   }
 }
-
-var menuLinks = document.querySelectorAll(".showMenu .nav-item")
-
-menuLinks.forEach(
-  function (menuLink) {
-    menuLink.addEventListener("click", toggleMenu)
-  }
-)
