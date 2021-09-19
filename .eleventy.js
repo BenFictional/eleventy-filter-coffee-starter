@@ -52,7 +52,7 @@ module.exports = (config) => {
   });
 
   // Image shortcode
-  config.addShortcode('img', function (path, aspect, alt) {
+  config.addShortcode('img', function (path, alt, aspect) {
 
       // Can we leave 'aspect' undefined (and put it third?) 
       var ratio = (aspect =="p") ? "portrait":"landscape";

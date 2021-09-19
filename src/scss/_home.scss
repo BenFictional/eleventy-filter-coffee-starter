@@ -182,20 +182,13 @@ section.featured-projects {
     }
 }
 
+
+
 section.featured-projects .card-list {
     grid-column: 2 / -1;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    
-
     .card { 
         margin-right: 1.5rem;
-        width: calc(100vw - 8rem);
-        flex-shrink: 0;
-        scroll-snap-align: center;
-        &:last-of-type { margin-right: 4rem; }
+        
         .project-meta { display: none; }
     }
 }
@@ -203,7 +196,7 @@ section.featured-projects .card-list {
 @include breakpoint(med) {
     section.featured-projects .card-list {
         display: contents;
-        overflow-x: visible;
+       
 
         .card { 
             margin-right: 0;

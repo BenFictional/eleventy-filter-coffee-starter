@@ -29,7 +29,7 @@ layout: 'layouts/home.html'
 
 {# Set for all #}
 {% set postslist = collections.featuredProjects %}
-<ul class="featured-projects-list card-list">
+<ul class="featured-projects-list card-list horizontal-scroll">
  {% for post in postslist %}
     {# Limit to three projects #}
     {% if loop.index0 < 3 %}
