@@ -1,6 +1,6 @@
 // COLOR
 $paper: #FDF6EB;
-$light: #fefefe;
+$light: #fffdf9;
 $dark: #2D272C;
 $gray: #dbd6d2;
 $light-gray: #E5E5E5;
@@ -118,7 +118,7 @@ button, .button {
   color: $light;
   max-width: 20ch;
   border: none;
-  padding: $unit-sml;
+  padding: $unit-sml $unit-med;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;

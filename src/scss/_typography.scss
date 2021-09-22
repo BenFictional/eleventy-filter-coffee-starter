@@ -41,8 +41,10 @@ ul { list-style: square; }
 
 // DARK MODE
 :root[color-mode="dark"] {
-a { color: var(--secondary-emphasis); }
-a:hover { color: var(--secondary); }
+    a { color: var(--secondary-emphasis); }
+    a:hover { color: var(--secondary); }
 
-p, time, span, ul, ol { color: $light-gray; }
+    p, time, span, ul, ol { color: $light-gray; }
+
+    button, .button { color: var(--element); }
 }

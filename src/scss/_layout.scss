@@ -10,21 +10,29 @@ main {
 
 
 // GALLERIES AND HORIZONTAL SCROLL
-.horizontal-scroll, .gallery {
+.gallery, .gallery-lrg {  
+  height: 16rem;
+  width: calc(100% + 1rem);
+ }
+
+.horizontal-scroll, .gallery, .gallery-lrg {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  
+
   @include breakpoint(med) {
       overflow-x: visible;
+      height: auto;
   }
   & > * {
     margin-right: $unit-med;
-    width: calc(100vw - 8rem);
-      flex-shrink: 0;
-      scroll-snap-align: center;
-      &:last-of-type { margin-right: 4rem; }
+    flex-shrink: 0;
+    flex-grow: auto;
+    scroll-snap-align: center;
+    &:last-of-type { margin-right: 4rem; }
   }
 } // end horizontal scroll
 
@@ -35,7 +43,7 @@ main {
 
 
 @include breakpoint(med) {
-  .gallery {
+  .gallery, .gallery-lrg {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
     gap: $unit-sml;
@@ -45,16 +53,24 @@ main {
     img {
       object-fit: cover;
       min-height: 100%;
-      &.portrait { grid-row: span 2; }
      }
+
+     .gallery-lrg img.portrait{
+      grid-row: span 2; 
+   }
   }
 }
 
+
+
+.centered {
+  text-align: center;
+}
 // ARTICLES
 article {
   max-width: 60ch;
   padding: $unit-med;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
 
   &.wide {
     max-width: 75ch;
@@ -65,7 +81,9 @@ article {
   }
 } // end article
 
-article > img, article > .gallery {
+article > img, 
+article > .gallery, 
+article > .gallery-lrg {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
 }
 
@@ -77,6 +95,15 @@ section {
   text-align: center;
 }
 
+// FORMS
+form {
+  margin: $unit-lrg auto;
+  max-width: 45ch;
+
+  input, textarea { 
+    width: 100%;
+  }
+}
 
 
 // Footer

@@ -25,20 +25,20 @@ layout: 'layouts/home.html'
 
 {############  PROJECTS ##############}
 <section class="featured-projects base-grid">
-<h2 class="banner title-right">Projects</h2>
+    <h2 class="banner title-right">Projects</h2>
 
-{# Set for all #}
-{% set postslist = collections.featuredProjects %}
-<ul class="featured-projects-list card-list horizontal-scroll">
- {% for post in postslist %}
-    {# Limit to three projects #}
-    {% if loop.index0 < 3 %}
-       {% include "partials/project-card.njk" -%}
-    {% endif %}
-  {% endfor %}
+    {# Set for all #}
+    {% set postslist = collections.featuredProjects %}
+    <ul class="featured-projects-list card-list horizontal-scroll">
+    {% for post in postslist %}
+        {# Limit to three projects #}
+        {% if loop.index0 < 3 %}
+        {% include "partials/project-card.njk" -%}
+        {% endif %}
+    {% endfor %}
 
-</ul>
-<a class="project-cta button button-lrg">View all projects</a>
+    </ul>
+    <a class="project-cta button button-lrg">View all projects</a>
 </section>
 
 {############  BLOG ##############}
@@ -48,7 +48,7 @@ layout: 'layouts/home.html'
 
     <ul class="featured-blog-list">
         {# Set for all #}
-{% set bloglist = collections.posts %}
+    {% set bloglist = collections.posts %}
  {% for post in bloglist %}
     {# Limit to three projects #}
     {% if loop.index0 < 2 %}
@@ -93,5 +93,6 @@ layout: 'layouts/home.html'
                 <li>Some text about this subject.</li>
             </ul>
         </div>
+        <a class="button button-lrg" href="/contact">Get in touch</a>
 </section>
 

@@ -1,11 +1,9 @@
 nav.primary-nav, nav.footer-nav {
     width: 100%;
-    
 
     .nav-item {
         margin: 0 $unit-med $unit-sml;
     }
-    
 
     a.nav-link { 
         text-transform: uppercase;
@@ -35,11 +33,15 @@ nav.primary-nav {
         opacity: 0;
         transform-origin: top;
         transition: opacity .25s ease, max-height .25s ease, transform .15s ease;
-    
+        visibility: hidden;
+
         &.showMenu {
+            visibility: visible;
             display: flex;
             opacity: 1;
             max-height: 1000px;   
+
+            .theme-toggle { margin-top: $unit-sml; }
           } 
         
         
@@ -100,8 +102,14 @@ nav.primary-nav {
     display: none;
 }
 
-:root[color-mode="dark"] .dark--hidden {
-    display: none;
+:root[color-mode="dark"] {
+    .dark--hidden {
+        display: none;
+    }
+    .light--hidden {
+        background-color: var(--element);
+        color: var(--surface);
+    }
 }
 
 .color-mode__btn {
@@ -114,10 +122,7 @@ nav.primary-nav {
     img { transform:translateY(-1.5px); }
 }
 
-.light--hidden {
-    background-color: var(--element);
-    color: var(--surface);
-}
+
 
 
 // MOBILE TOGGLE

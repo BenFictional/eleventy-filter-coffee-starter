@@ -6,5 +6,21 @@ eleventyNavigation:
   order: 2
 ---
 
+<div class="centered">
+Hello! Please get in touch and I promise to get back to you.
+</div>
 
-I'm baby craft beer pok pok selfies taxidermy trust fund hoodie, af gochujang banjo kale chips lo-fi asymmetrical chicharrones sartorial. Gluten-free palo santo hexagon neutra vape banjo sriracha, tattooed hashtag normcore food truck. Neutra fixie synth, brooklyn tumeric lomo pok pok chambray. La croix master cleanse unicorn chicharrones glossier, fam truffaut aesthetic gastropub tattooed.
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
