@@ -21,7 +21,8 @@
     "gulp-uglify": "^3.0.2",
     "html-minifier": "^4.0.0",
     "isotope-layout": "^3.0.6",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "sass-loader": "^12.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.2",
