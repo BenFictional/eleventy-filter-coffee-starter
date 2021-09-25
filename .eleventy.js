@@ -58,7 +58,7 @@ module.exports = (config) => {
       var ratio = (aspect =="p") ? "portrait":"landscape";
 
       if (process.env.NODE_ENV === 'production') {
-      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://elated-varahamihira-719e35.netlify.app/images/${path}" alt="${alt}" class="${ ratio }">`
+      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://ba-test.netlify.app/images/${path}" alt="${alt}" class="${ ratio }">`
       }
 
       else {
