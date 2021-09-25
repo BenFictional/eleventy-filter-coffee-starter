@@ -25,6 +25,7 @@ nav.primary-nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 10;
 
     a { color: var(--element); }
     
@@ -58,6 +59,7 @@ nav.primary-nav {
     .nav-menu {
         opacity: 1;
         max-height: none;
+        visibility: visible;
         flex-direction: row;
         align-content: center;
         padding: 0;
@@ -83,6 +85,7 @@ nav.primary-nav {
 
 .site-title{
     font-size: clamp($h5-size, 3vw, $h4-size);
+    line-height: 1;
     @include breakpoint(lrg) {
         margin-left: $unit-med;
     }

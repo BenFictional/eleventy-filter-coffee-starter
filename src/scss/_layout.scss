@@ -21,6 +21,7 @@ main {
   align-items: stretch;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  gap: $unit-med;
   
 
   @include breakpoint(med) {
@@ -28,7 +29,7 @@ main {
       height: auto;
   }
   & > * {
-    margin-right: $unit-med;
+    // margin-right: $unit-med;
     flex-shrink: 0;
     flex-grow: auto;
     scroll-snap-align: center;
@@ -140,11 +141,12 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: clamp($unit-med, 5vh, 5rem) 0;
 }
 
 nav.footer-nav, .copyright {
-  width: max(400px, 40vw);
+  max-width: 60ch;
   margin: $unit-med auto;
 }
 .copyright {

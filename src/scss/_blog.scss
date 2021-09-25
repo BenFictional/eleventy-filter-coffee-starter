@@ -11,11 +11,12 @@
     }
   }
 
+  // Blog page only
   .blog .post-item {
     display: flex;
     flex-direction: column;
     margin-top: $unit-lrg;
-   
+    
   }
   
   .post-image {
@@ -23,8 +24,14 @@
     img { max-width: 100%; }
   }
   
+  .post-item {
+    time, .post-category { 
+      font-family: $mono-font; 
+      font-size: $small-font-size; }
+  }
+
   .post-title { 
-    font-size: $h3-size;
+    font-size: clamp($h4-size, 5vw, $h3-size);
     line-height: 1;
     margin: $unit-med 0;
     display: block;
@@ -32,10 +39,9 @@
   .post-category { 
     text-transform: uppercase;
     margin-right: $unit-med;
-    font-family: $mono-font;
     color: $light;
     padding: $unit-sml;
-    font-size: $small-font-size;
+  
     
     &.tutorial {
       background-color: var(--tertiary);
