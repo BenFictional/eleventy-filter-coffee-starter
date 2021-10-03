@@ -38,13 +38,12 @@
    flex-wrap: wrap;
   
    li { 
-    //  margin: 0 $unit-sml;
      text-transform: capitalize;
      font-family: $mono-font;
      }
 
     button {
-        background-color: var(--element-subtle);
+        background-color: $dark-gray;
         border-radius: 0;
         outline: 1px solid var(--surface);
         font-weight: normal;
@@ -83,7 +82,8 @@
     position: relative;
     z-index: 1;
     padding-bottom: $nudge-sml;
-    margin-top: -$unit-med;
+    max-width: 150ch;
+    margin: -$unit-med auto 0;
 
     .project-sizer, .project { height: 90vh; }
 
@@ -104,13 +104,13 @@
       background-size: 44px;
 
       .project-sizer { height: 45rem; }
-
       .project, .project-sizer { width: calc(50% - 2rem); }
 
       .project { 
         height: auto; 
         &:nth-of-type(odd) {
-          transform: translateY($nudge-sml);
+          // transform: translateY($nudge-sml);
+          margin-top: $nudge-sml;
         }
       }
     }
@@ -120,14 +120,14 @@
   @include breakpoint(xl) {
     .projects ul.timeline { 
       // margin-top: -$unit-lrg;
-      padding-bottom: $nudge-lrg;
-
-      .project, .project-sizer { width: calc(33.33% - 2rem); }
+      // padding-bottom: $nudge-lrg;
+    
     .project-sizer { height: 55rem; }
-
+    .project, .project-sizer { width: calc(33.33% - 2rem); }
+   
     .project {
-      &:nth-of-type(odd) { transform: none; }
-      &:nth-of-type(3n+0) { transform: translateY($nudge-lrg); }
+      &:nth-of-type(odd) { margin-top: inherit; }
+      &:nth-of-type(3n+0) { margin-top: $nudge-lrg; }
      }
 
      } // end timeline
@@ -189,6 +189,8 @@
 
   .no-results {
       display: none;
+      padding: $unit-lrg;
+      text-align: center;
       &.visible { display: block; }
   }
 

@@ -3,6 +3,7 @@
 var grid = document.querySelector('.timeline');
 var iso;
 
+
 // Hash function
 function getHashFilter() {
   var hash = location.hash;
@@ -47,6 +48,14 @@ imagesLoaded( grid, function() {
    // set filter for Isotope
    iso.arrange({ filter: filterValue });
    
+   // Add class to visible
+   
+  
+    // ?
+
+
+
+   
    // Set hash and remove period from string
    location.hash = 'filter=' + encodeURIComponent( filterValue.replace('.', '') );
    
@@ -59,7 +68,7 @@ imagesLoaded( grid, function() {
     noResults.classList.remove('visible');
   }  
 
- });
+ }); // end filter action
  
  // change is-checked class on buttons
  var buttonGroups = document.querySelectorAll('.button-group');
@@ -86,6 +95,7 @@ imagesLoaded( grid, function() {
     if ( !hashFilter && isIsotopeInit ) {
       return;
     }
+    // iso.filteredItems.classList.add(visible);
     isIsotopeInit = true;
    }
  }

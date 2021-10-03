@@ -62,17 +62,23 @@ section.base-grid .banner {
     display: flex;
     flex-direction: column;
     padding-bottom: 15rem;
-    // margin-top: -7rem;
+    padding-top: 0;
+    margin-top: -5rem;
     overflow-x: clip;
 }
 
 .hero-text {
     order: 2;
+    display: grid;
+    grid-template-rows: 18rem auto;
+    position: relative;
     p {
-        font-size: clamp($h5-size, 3vw, $h2-size);
+        display: none;
+        font-size: clamp($h4-size, 3vw, $h2-size);
         line-height: 1.2;
-        max-width: 30ch;
+        max-width: 40ch;
         margin: $unit-lrg auto;
+        &.active { display: block; }
     }
 }
 
@@ -82,13 +88,17 @@ section.base-grid .banner {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr;
-    transform: translateY(-7rem);
+    // transform: translateY(-7rem);
 }
 
 @include breakpoint(med) {
-    .hero { flex-direction: row; margin-top: 0; }
-    .hero-text { order: 1; flex: 1; }
-    .hero-art { order: 2; flex: 2; max-height: 30rem; }
+    .hero { flex-direction: row; margin-top: 3rem; }
+    .hero-text { 
+        order: 1; 
+        flex: 1; 
+        grid-template-rows: 32rem auto;
+    }
+    .hero-art { order: 2; flex: 1.75; max-height: 30rem; }
 }
 
 
@@ -305,10 +315,13 @@ section.featured-projects .card-list {
     section.featured-projects .button::after {
         content:"";
         position: absolute;
-        top: -10rem; left: -25rem; bottom: -15rem; right: -10rem;
+        top: 0;
+        left: -35rem;
+        bottom: -15rem;
+        right: 5rem;
         z-index: -1;
-        opacity: 0.5;
-        background: url('../assets/spiral.svg');
+        // opacity: 0.5;
+        background: url('../assets/arrow.svg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -453,8 +466,19 @@ section.featured-design {
 
     h2, .button { background-color: var(--secondary); }
 
-    .service h3 { margin-left: $unit-med;}
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 { 
+            margin-left: $unit-med; 
+            margin-bottom: $unit-med;
+        }
+        img { max-width: 20ch; }
+    }
 }
+
 
 .design-gallery {
     display: grid;
@@ -511,6 +535,7 @@ section.featured-design {
             align-self: center;
             justify-self: center;
          }
+        .button { grid-column: 3 / 6;}
     }
 }
 

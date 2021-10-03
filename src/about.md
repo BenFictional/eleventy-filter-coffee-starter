@@ -3,7 +3,7 @@ title: About
 layout: 'layouts/article.html'
 eleventyNavigation:
   key: About
-  order: 1
+  order: 3
 ---
 
 

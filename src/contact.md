@@ -3,7 +3,7 @@ title: Contact
 layout: 'layouts/article.html'
 eleventyNavigation:
   key: Contact
-  order: 2
+  order: 4
 ---
 
 <div class="centered">

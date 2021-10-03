@@ -78,7 +78,7 @@ nav.primary-nav {
     nav.primary-nav .nav-menu {
         .nav-item:first-of-type { margin-left: auto; }
         .nav-item:last-of-type { 
-            margin: -$unit-sml $unit-med 0 auto;
+            margin: 0 $unit-med 0 auto;
         }
     }
 }
@@ -118,6 +118,7 @@ nav.primary-nav {
 .color-mode__btn {
     font-size: $small-font-size;
     margin-top: -0.33rem;
+    box-shadow: none;
 }
 .dark--hidden {
     background-color: var(--element);

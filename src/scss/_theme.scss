@@ -4,7 +4,7 @@ $light: #fffdf9;
 $dark: #2D272C;
 $gray: #dbd6d2;
 $light-gray: #E5E5E5;
-$dark-gray: #484448;
+$dark-gray: #a29b9b;
 $primary: #B4422B;
 $primary-light: lighten($primary, 7%);
 $primary-dark: darken($primary, 5%);
@@ -124,9 +124,20 @@ button, .button {
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
+  transition: all .3s;
   &:hover {
-    // background-color: $primary-dark;
     opacity: 0.85;
+  }
+  &:focus-visible {
+    border: 3px solid var(--tertiary);
+  }
+
+  &.shadow-button {
+    box-shadow: 5px 5px var(--element);
+    &:active {
+      box-shadow: 0px 0px var(--element);
+      transform: translate(5px, 5px);
+    }
   }
 }
 .icon-button {

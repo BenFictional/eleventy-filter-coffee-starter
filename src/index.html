@@ -4,7 +4,16 @@ layout: 'layouts/home.html'
 {# HERO #}
 <section class="hero">
     <div class="hero-text">
-        <p>I'm baby squid four loko air plant, mixtape direct trade tote bag viral organic before they sold out pabst austin vice kombucha street art slow-carb.</p>
+
+        <p class="active">I'm an interdisciplinary artist and designer, but mostly I love playing with technology and telling stories that imagine new realities.</p>
+        
+        <p>I teach at Penn State University, primarily within the online <a href="https://dmd.psu.edu">Digital Multimedia Design</a> that connects students around the world through interdisciplinary project-based learning.</p>
+
+        <p>My artwork use technology and narrative storytelling to reimagine the world and explore the gaps between fact and fiction.</p>
+
+        <p>I'm a ScFi geek who also loves conceptual art and fonts.</p>
+
+        <button class="button-lrg shadow-button" id="generate-bio">Generate new bio</button>
     </div>
     
 <div class="hero-art">
@@ -38,7 +47,7 @@ layout: 'layouts/home.html'
     {% endfor %}
 
     </ul>
-    <a class="project-cta button button-lrg">View all projects</a>
+    <a class="project-cta button button-lrg shadow-button">View all projects</a>
 </section>
 
 {############  BLOG ##############}
@@ -79,20 +88,24 @@ layout: 'layouts/home.html'
         </aside>
         <div class="service">
             <h3>Graphic Design</h3>
+            <img src="/assets/service-design.svg" alt="illustration of paper and pencil">
             <ul>
-                <li>Some text about this subject.</li>
-                <li>Some text about this subject.</li>
-                <li>Some text about this subject.</li>
+                <li>Logos</li>
+                <li>Campaign branding</li>
+                <li>Print design</li>
             </ul>
         </div>
         <div class="service">
             <h3>Websites</h3>
+            <img src="/assets/service-web.svg" alt="illustration of website and smartphone">
             <ul>
-                <li>Some text about this subject.</li>
-                <li>Some text about this subject.</li>
-                <li>Some text about this subject.</li>
+                <li>Bespoke Wordpress themes</li>
+                <li>Static sites and landing pages</li>
+                <li>Design and development together</li>
             </ul>
         </div>
-        <a class="button button-lrg" href="/contact">Get in touch</a>
+        <a class="button button-lrg shadow-button" href="/contact">Get in touch</a>
 </section>
 
+
+<script src="js/home-min.js"></script>
