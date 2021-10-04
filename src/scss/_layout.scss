@@ -50,6 +50,8 @@ main {
     gap: $unit-sml;
     grid-auto-flow: dense;
     margin: $align-wide;
+    width: $wide-width;
+    max-width: $wide-width;
 
     img {
       object-fit: cover;
@@ -69,7 +71,7 @@ main {
 }
 // ARTICLES
 article {
-  max-width: 60ch;
+  max-width: $article-width;
   padding: $unit-med;
   margin: $unit-lrg auto 6rem;
 
@@ -85,7 +87,7 @@ article {
 article > img, 
 article > .gallery, 
 article > .gallery-lrg {
-  margin: clamp($unit-med, 5vw, $unit-lrg) auto;
+  // margin: clamp($unit-med, 5vw, $unit-lrg) auto;
 }
 
 section {

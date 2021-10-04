@@ -200,6 +200,11 @@ section.featured-projects {
 
     @include breakpoint(lrg) {
         grid-template-rows: $header-height auto auto 16rem;
+        // background: url('../assets/arrow.svg');
+        // background-repeat: no-repeat;
+        // background-position: bottom 0 left 0;
+        // background-size: 30%;
+        // padding-bottom: 6rem;
     }
     @include breakpoint(xl) {
         grid-template-rows: $header-height 2fr 1fr 1fr;
@@ -312,19 +317,7 @@ section.featured-projects .card-list {
         height: 3rem;
         line-height: 1;
     }
-    section.featured-projects .button::after {
-        content:"";
-        position: absolute;
-        top: 0;
-        left: -35rem;
-        bottom: -15rem;
-        right: 5rem;
-        z-index: -1;
-        // opacity: 0.5;
-        background: url('../assets/arrow.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+  
 } // end lrg
 
 @include breakpoint(xl) {
