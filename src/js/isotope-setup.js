@@ -20,10 +20,13 @@ imagesLoaded( grid, function() {
     itemSelector: '.project',
     percentPosition: true,
     layoutMode: 'masonry',
-    cellsByRow: {
-      columnWidth: '.project-sizer',
-      rowHeight: '.project-sizer'
-    }
+    gutter: 50,
+    columnWidth: 400,
+    fitWidth: true
+    // cellsByRow: {
+    //   columnWidth: '.project-sizer',
+    //   rowHeight: '.project-sizer'
+    // }
   });
 
  // store filter for each group
