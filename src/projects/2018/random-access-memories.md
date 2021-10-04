@@ -32,5 +32,4 @@ Random Access Memories is part of [Digital Fringe](https://fringearts.com/list-v
 {% img '2018/Card-flip_500.gif', 'Animation of punchcards with holes punched in different places' %}
 {% img '2018/ram-end-square.jpg', 'A 3D wireframe of a head' %}
 {% img '2018/card-stain.jpg', 'A generic image description'%}
-{% img '2018/andrew-ram-pr.jpg', 'A generic image description' %}
 </div>

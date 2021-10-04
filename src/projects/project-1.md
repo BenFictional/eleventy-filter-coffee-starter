@@ -37,8 +37,9 @@ Actually green juice butcher cronut, tumeric tote bag PBR&B cred typewriter fran
 
 <div class="gallery">
 {% img 'yak.jpg', 'A generic image description' %}
-{% img 'frenchpress.jpg', 'A generic image description' %}
 {% img 'parrot.jpg', 'A generic image description', 'p' %}
+{% img 'frenchpress.jpg', 'A generic image description' %}
+
 
 </div>
 
