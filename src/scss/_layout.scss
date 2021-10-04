@@ -71,7 +71,7 @@ main {
 article {
   max-width: 60ch;
   padding: $unit-med;
-  margin: 0 auto 6rem;
+  margin: $unit-lrg auto 6rem;
 
   &.wide {
     max-width: 75ch;

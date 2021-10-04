@@ -20,9 +20,6 @@ imagesLoaded( grid, function() {
     itemSelector: '.project',
     percentPosition: true,
     layoutMode: 'cellsByRow',
-    gutter: 50,
-    columnWidth: 400,
-    fitWidth: true
     cellsByRow: {
       columnWidth: '.project-sizer',
       rowHeight: '.project-sizer'
