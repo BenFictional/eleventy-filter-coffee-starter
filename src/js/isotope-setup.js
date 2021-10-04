@@ -1,6 +1,7 @@
 // external js: isotope.pkgd.js, imagesloaded.pkgd.js
 
 var grid = document.querySelector('.timeline');
+var projects = document.querySelector('.project');
 var iso;
 
 
@@ -18,7 +19,7 @@ imagesLoaded( grid, function() {
   iso = new Isotope( grid, {
     itemSelector: '.project',
     percentPosition: true,
-    layoutMode: 'cellsByRow',
+    layoutMode: 'masonry',
     cellsByRow: {
       columnWidth: '.project-sizer',
       rowHeight: '.project-sizer'
@@ -49,9 +50,12 @@ imagesLoaded( grid, function() {
    iso.arrange({ filter: filterValue });
    
    // Add class to visible
-   
-  
-    // ?
+
+  iso.on( 'arrangeComplete', function( filteredItems ) {
+    var filteredItems = iso.getFilteredItemElements();
+    projects.classList.remove('filtered');
+    filteredItems.forEach(function(item) { item.classList.add('filtered')});
+  });
 
 
 
@@ -66,6 +70,7 @@ imagesLoaded( grid, function() {
   }
   else {
     noResults.classList.remove('visible');
+
   }  
 
  }); // end filter action
@@ -95,7 +100,7 @@ imagesLoaded( grid, function() {
     if ( !hashFilter && isIsotopeInit ) {
       return;
     }
-    // iso.filteredItems.classList.add(visible);
+ 
     isIsotopeInit = true;
    }
  }
