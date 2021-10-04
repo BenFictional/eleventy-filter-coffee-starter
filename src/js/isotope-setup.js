@@ -1,8 +1,7 @@
-// external js: isotope.pkgd.js, imagesloaded.pkgd.js
-
 var grid = document.querySelector('.timeline');
 var projects = document.querySelector('.project');
 var iso;
+var hashID = window.location.hash.substring(1);
 
 
 // Hash function
@@ -73,7 +72,7 @@ imagesLoaded( grid, function() {
 
   }  
 
- }); // end filter action
+ }); // end button-click action
  
  // change is-checked class on buttons
  var buttonGroups = document.querySelectorAll('.button-group');
