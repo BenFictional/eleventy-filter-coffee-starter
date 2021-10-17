@@ -83,6 +83,7 @@ imagesLoaded( grid, function() {
    buttonGroup.addEventListener( 'click', onButtonGroupClick );
  }
  
+ // Manage button states
  function getOnButtonGroupClick( buttonGroup ) {
    return function( event ) {
      // check for only button clicks
@@ -102,7 +103,7 @@ imagesLoaded( grid, function() {
  
     isIsotopeInit = true;
    }
- }
+ } // end button action
  
  // flatten object by concatting values
  function concatValues( obj ) {
@@ -112,4 +113,6 @@ imagesLoaded( grid, function() {
    }
    return value;
  }
+
 }); // end imageLoaded
+
