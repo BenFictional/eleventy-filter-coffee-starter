@@ -1,21 +1,17 @@
-var grid = document.querySelector('.timeline');
-var projects = document.querySelector('.project');
-var iso;
-var hashID = window.location.hash.substring(1);
+// external js: isotope.pkgd.js
+$(document).ready(function() {
 
+  function getHashFilter() {
+    var hash = location.hash;
+    // get filter=filterName
+    var matches = location.hash.match(/filter=([^&]+)/i);
+    var hashFilter = matches && matches[1];
+    return hashFilter && decodeURIComponent(hashFilter);
+  }
 
-// Hash function
-function getHashFilter() {
-  var hash = location.hash;
-  var matches = location.hash.match( /filter=([^&]+)/i );
-  var hashFilter = matches && matches[1];
-  return hashFilter && decodeURIComponent( hashFilter );
-}
-
-// Primary Isotope settings
-imagesLoaded( grid, function() {
-  // init Isotope after all images have loaded
-  iso = new Isotope( grid, {
+  // init Isotope
+  var $grid = $('.timeline').isotope({
+    itemSelector: '.project'
     itemSelector: '.project',
     percentPosition: true,
     layoutMode: 'cellsByRow',
@@ -24,95 +20,94 @@ imagesLoaded( grid, function() {
       rowHeight: '.project-sizer'
     }
   });
+  
+  // Function to check if filters have some results
+  function checkResults(){
+    var visibleItemsCount = $grid.data('isotope').filteredItems.length;
+    console.log(filters);
+    if( visibleItemsCount > 0 ){
+      $('.no-results').hide();
+    }
+    else{
+      $('.no-results').show();
+    }
+  }
 
- // store filter for each group
- var filters = {};
+  // store filter for each group
+  var filters = {};
 
- // Is Isotope running? 
- var isIsotopeInit = false;
+  $('.filters').on('click', '.filter-button', function() {
+    var $this = $(this);
+    // get group key
+    var $buttonGroup = $this.parents('.button-group');
+    var filterGroup = $buttonGroup.attr('data-filter-group');
+    // set filter for group
+    filters[filterGroup] = $this.attr('data-filter');
+    // combine filters
+    var filterValue = concatValues(filters);
+    // set filter for Isotope
+    $grid.isotope({ filter: filterValue });
 
- // Filter on button click
- var filtersElem = document.querySelector('.filters');
- filtersElem.addEventListener( 'click', function( event ) {
-   // check for only button clicks
-   if ( !matchesSelector( event.target, 'button' ) ) {
-          return;
-        }
- 
-   var buttonGroup = fizzyUIUtils.getParent( event.target, '.button-group' );
-   var filterGroup = buttonGroup.getAttribute('data-filter-group');
-   // set filter for group
-   filters[ filterGroup ] = event.target.getAttribute('data-filter');
-   // combine filters
-   var filterValue = concatValues( filters );
-   // set filter for Isotope
-   iso.arrange({ filter: filterValue });
-   
-   // Add class to visible
+    location.hash = 'filter=' + encodeURIComponent(filterValue);
 
-  iso.on( 'arrangeComplete', function( filteredItems ) {
-    var filteredItems = iso.getFilteredItemElements();
-    projects.classList.remove('filtered');
-    filteredItems.forEach(function(item) { item.classList.add('filtered')});
   });
 
+  // change is-checked class on buttons
+  $('.button-group').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
 
+  var isIsotopeInit = false;
 
-   
-   // Set hash and remove period from string
-   location.hash = 'filter=' + encodeURIComponent( filterValue.replace('.', '') );
-   
-  // No results check
-  var noResults = document.querySelector('.no-results');
-  if (iso.filteredItems.length == 0) {
-    noResults.classList.add('visible');
-  }
-  else {
-    noResults.classList.remove('visible');
-
-  }  
-
- }); // end button-click action
- 
- // change is-checked class on buttons
- var buttonGroups = document.querySelectorAll('.button-group');
- 
- for ( var i=0; i < buttonGroups.length; i++ ) {
-   var buttonGroup = buttonGroups[i];
-   var onButtonGroupClick = getOnButtonGroupClick( buttonGroup );
-   buttonGroup.addEventListener( 'click', onButtonGroupClick );
- }
- 
- // Manage button states
- function getOnButtonGroupClick( buttonGroup ) {
-   return function( event ) {
-     // check for only button clicks
-    //  var isButton = event.target.classList.contains('button');
-     if ( !matchesSelector( event.target, 'button' ) ) {
+  function onHashchange() {
+    var hashFilter = getHashFilter();
+    if (!hashFilter && isIsotopeInit) {
       return;
     }
-     var checkedButton = buttonGroup.querySelector('.is-checked');
-     checkedButton.classList.remove('is-checked')
-     event.target.classList.add('is-checked');
 
-     // Hash Update
-     var hashFilter = getHashFilter();
-    if ( !hashFilter && isIsotopeInit ) {
-      return;
+    // filter isotope
+    $grid.isotope({
+      itemSelector: '.project',
+      filter: hashFilter
+    });
+    $grid.isotope();
+    checkResults();
+    // set selected class on button
+    // only on page load, if isotope hasn't inited yet
+    if (!isIsotopeInit && hashFilter) {
+      var buttonsFilterSelector = getButtonsFilterSelector(hashFilter);
+      // trigger click to make it selected and act normal
+      // sets correct filter state
+      $('.filters').find(buttonsFilterSelector).trigger('click');
     }
- 
+    
     isIsotopeInit = true;
-   }
- } // end button action
- 
- // flatten object by concatting values
- function concatValues( obj ) {
-   var value = '';
-   for ( var prop in obj ) {
-     value += obj[ prop ];
-   }
-   return value;
- }
+  }
 
-}); // end imageLoaded
+  $(window).on('hashchange', onHashchange);
+  // trigger event handler to init Isotope
+  onHashchange();
 
+  
+// flatten object by concatting values
+function concatValues(obj) {
+  var value = '';
+  for (var prop in obj) {
+    value += obj[prop];
+  }
+  return value;
+}
+
+// get filter selectors from hash
+function getButtonsFilterSelector(hashFilter){
+  var filters = hashFilter.substring(1).split(".");
+  var joinedFilters = filters.join('"], [data-filter=".');
+  var selector = '[data-filter=".' + joinedFilters + '"]';
+  return selector;
+}
+  
+});
