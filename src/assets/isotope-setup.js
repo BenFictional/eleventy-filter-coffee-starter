@@ -11,7 +11,6 @@ $(document).ready(function() {
 
   // init Isotope
   var $grid = $('.timeline').isotope({
-    itemSelector: '.project'
     itemSelector: '.project',
     percentPosition: true,
     layoutMode: 'cellsByRow',
