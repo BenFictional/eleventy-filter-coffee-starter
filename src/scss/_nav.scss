@@ -113,6 +113,8 @@ nav.primary-nav {
         background-color: var(--element);
         color: var(--surface);
     }
+
+    .primary-nav a { color: var(--element); }
 }
 
 .color-mode__btn {
