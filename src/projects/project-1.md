@@ -25,7 +25,7 @@ I'm baby taxidermy neutra austin tbh vexillologist disrupt next level live-edge 
 
 Green juice YOLO mustache humblebrag, chartreuse pinterest copper mug brooklyn +1 yr pitchfork. +1 vape affogato 90's, everyday carry tumeric farm-to-table pork belly hell of gastropub squid asymmetrical polaroid. Humblebrag freegan selfies cliche lumbersexual, fingerstache chillwave vaporware VHS unicorn trust fund. Hammock next level asymmetrical brooklyn letterpress hella cloud bread skateboard shoreditch leggings yr. Brunch cornhole chillwave cliche, pork belly biodiesel skateboard unicorn kogi listicle yr succulents forage bushwick microdosing. Synth flannel knausgaard aesthetic. Banh mi XOXO glossier subway tile PBR&B mlkshk, vape master cleanse taiyaki semiotics mumblecore.
 
-<div class="gallery-lrg">
+<div class="gallery">
 {% img 'yak.jpg', 'A generic image description' %}
 {% img 'yak.jpg', 'A generic image description' %}
 {% img 'parrot.jpg', 'A generic image description', 'p' %}

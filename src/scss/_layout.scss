@@ -10,19 +10,22 @@ main {
 
 
 // GALLERIES AND HORIZONTAL SCROLL
-.gallery, .gallery-lrg {  
+.gallery{  
   height: 16rem;
   width: calc(100% + 1rem);
   margin: $unit-lrg 0;
  }
 
-.horizontal-scroll, .gallery, .gallery-lrg {
+.horizontal-scroll, .gallery {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center; // formerly stretch
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: $unit-med;
+
+  .landscape { aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+  .portrait { aspect-ratio: 3/4; object-fit: cover; width: 100%; }
   
 
   @include breakpoint(med) {
@@ -45,13 +48,13 @@ main {
 
 
 @include breakpoint(med) {
-  .gallery, .gallery-lrg {
+  .gallery {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
     gap: $unit-sml;
     grid-auto-flow: dense;
 
-    * { max-height: none;}
+    * { max-height: 100vh;}
 
      img.portrait{
       grid-row: span 2; 
@@ -60,10 +63,11 @@ main {
 }
 
 @include breakpoint(lrg) {
-  .gallery, .gallery-lrg {
-    margin: $align-wide;
-  width: $wide-width;
-  max-width: $wide-width;
+  .gallery {
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    margin: $unit-lrg -30ch;
+  width: 120ch;
+  max-width: 120ch;
   }
 }
 
@@ -88,7 +92,7 @@ article {
   }
 } // end article
 
-article > img  {
+article > img, article > iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
 }
 

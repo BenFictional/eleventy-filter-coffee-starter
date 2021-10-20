@@ -9,7 +9,7 @@
 </article>
 
 {# Set for all #}
-{% set postslist = collections.projects %}
+{% set postslist = collections.projects | reverse %}
 
 {# FILTER BUTTONS #}
 <nav class="filters">
@@ -39,11 +39,11 @@
  
  <li class="project-sizer"></li>
 
-  {% for post in postslist %}
+  {%- for post in postslist -%}
     
        {% include "partials/project-card.njk" %}
 
-  {% endfor %}
+  {%- endfor -%}
 </ul>
 
 <div class="no-results">
@@ -51,11 +51,10 @@
   <p>Try changing filters.</p>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="/js/cells-by-row-min.js"></script>
-<script src="/assets/isotope-setup.js"></script>
+<script src="/js/isotope-setup-min.js"></script>
 
 {% endblock %}
 

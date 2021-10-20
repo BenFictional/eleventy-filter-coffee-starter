@@ -1,8 +1,8 @@
 ---
 layout: layouts/post.html
-title: A spectacular project
+title: A spectacular project from 2013
 description: Fanny pack migas man bun direct trade tilde brunch echo park brooklyn street art truffaut disrupt YOLO thundercats subway tile.
-date: 2020-01-01
+date: 2013-01-01
 location: Baltimore
 featured_project: true
 featured_image: /images/yak.jpg

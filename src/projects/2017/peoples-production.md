@@ -8,19 +8,20 @@ featured_image: /images/2017/story-wall-writing-2.jpg
 featured_alt: A woman writing on a huge wall of paper
 featured_project: true
 tags: projects
-project_type: art
+project_type: 
+  - art
 media:
   - video
   - participatory
 ---
 
-{% img '2017/images/peoples-social-card-trans-1.png', 'People's Production Logo and illustrated figures' %}
+{% img '/2017/peoples-social-card-trans-1.png', "People's Production Logo and illustrated figures" %}
 
 
 Want to make a movie? That typically daunting idea was broken apart and put on display for several weeks at Penn State University, where students, staff, and faculty were invited to participate in the production of a crowd-sourced movie. Everything from story writing, to acting, to sound recording was presented as participatory art in and around the Borland Project Space. The goal was to involve as many people as possible, lowering the barriers to entry all the way to the ground and revealing the intricacies of filmmaking to the public.
 
 <iframe src="https://player.vimeo.com/video/253311302?h=abe0107687" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/253311302">Undecided: A People&#039;s Production (Trailer)</a> from <a href="https://vimeo.com/user1677095">Benjamin Andrew</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 
  
 
@@ -29,7 +30,7 @@ Want to make a movie? That typically daunting idea was broken apart and put on d
 The movie began with twenty feet of blank paper and color-coded prompts like "character flaws," "inciting incidents," and "macguffins." Visitors to the gallery left ideas on the wall, and I patrolled campus with a clipboard to round up some additional suggestions. A scheduled event at the end of the first week, invited film professor Martin Camden and two members of Happy Valley Improv to help plot a story through the myriad suggestions. Not every suggestion made it into the final story, but participants developed ideas during a fast track writing session that served as a crash course in screenwriting. I wrote the script over the following weekend in preparation for a marathon two weeks of shooting.
 
   
-  {% img '2017/workshop-1024x683.jpg', "Writing workshop with students" %}
+{% img '2017/writing-workshop.jpg', 'Writing workshop with students' %}
 
 Given that the project took place on a college campus, the story focused on a college student finding their way in the world. The formal structure of characters being portrayed by multiple actors meant that shifting appearances would be an inherit part of the movie. Experiments like [Star Wars Uncut](http://www.starwarsuncut.com/) and my own [test reel](https://vimeo.com/210777350) convinced me that the story would be legible despite this effect, but I wanted to reference that effect in the actual story somehow.
 
@@ -41,7 +42,11 @@ With script in hand, I asked random passersby to "help make a movie" for a few m
 
 <div class="gallery">
 {% img '/2017/story-detail.jpg', 'Closeup of writing on wall' %}
-{% img '/2017/shooting-outside.jpg', 'Group of people talking outside with a camera on tripod' %}
+{% img '/2017/shooting-outdoors.jpg', 'Group of people talking outside with a camera on tripod' %}
+{% img '/2017/storyboards-props.jpg', 'Storyboard papers tacked to a wall with a shovel and assorted props' %}
+{% img '/2017/recording-studio.jpg', 'A makeshift recording studio' %}
+{% img '/2017/foley-shoes.jpg', 'recording foley sound effects with shoes on a carpet' %}
+{% img '/2017/foley-workshop-1.jpg', 'A group of people smiling while looking at a screen' %}
 </div>
 
 ## Recording
@@ -53,4 +58,4 @@ Unedited dailies were displayed back in the gallery, where props and storyboards
 The final film screened at the Palmer Museum of Art in February 2018. Watch the full film here:
 
 <iframe src="https://player.vimeo.com/video/255758557?h=e14fe32d00" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/255758557">Undecided: A People&#039;s Production</a> from <a href="https://vimeo.com/user1677095">Benjamin Andrew</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+

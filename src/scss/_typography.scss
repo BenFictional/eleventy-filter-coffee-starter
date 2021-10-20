@@ -10,11 +10,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 { font-size: $h1-size; margin-bottom: $h1-size; text-transform: uppercase; }
-h2 { font-size: $h2-size; margin-bottom: $h2-size; }
-h3 { font-size: $h3-size; margin-bottom: $h3-size; }
-h4 { font-size: $h4-size; margin-bottom: $h4-size; }
-h5 { font-size: $h5-size; margin-bottom: $h5-size; }
-h6 { font-size: $h6-size; margin-bottom: $h6-size; }
+h2 { font-size: $h2-size; margin-bottom: $h2-size; margin-top: $h2-size; }
+h3 { font-size: $h3-size; margin-bottom: $h3-size; margin-top: $h3-size; }
+h4 { font-size: $h4-size; margin-bottom: $h4-size; margin-top: $h4-size; }
+h5 { font-size: $h5-size; margin-bottom: $h5-size; margin-top: $h5-size; }
+h6 { font-size: $h6-size; margin-bottom: $h6-size; margin-top: $h6-size; }
 
 a {
     text-decoration: none;
