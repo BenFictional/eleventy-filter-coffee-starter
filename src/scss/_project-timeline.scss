@@ -6,7 +6,10 @@
  // Nav filters
   .filters {
     padding-top: $unit-med;
-    height: 6rem;
+  
+    @include breakpoint(med) {
+      height: 6rem;
+    }
 
     @include breakpoint(lrg) {
       display: flex;

@@ -10,30 +10,23 @@ main {
 
 
 // GALLERIES AND HORIZONTAL SCROLL
-.gallery{  
-  height: 16rem;
-  width: calc(100% + 1rem);
-  margin: $unit-lrg 0;
- }
+
+
 
 .horizontal-scroll, .gallery {
   display: flex;
   flex-direction: row;
-  align-items: center; // formerly stretch
+  align-items: stretch; // formerly stretch
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: $unit-med;
-
-  .landscape { aspect-ratio: 4/3; object-fit: cover; width: 100%; }
-  .portrait { aspect-ratio: 3/4; object-fit: cover; width: 100%; }
-  
 
   @include breakpoint(med) {
       overflow-x: visible;
       height: auto;
   }
+
   & > * {
-    // margin-right: $unit-med;
     flex-shrink: 0;
     flex-grow: auto;
     scroll-snap-align: center;
@@ -41,22 +34,36 @@ main {
   }
 } // end horizontal scroll
 
-.gallery > * {
-  max-height: 16rem;
-  width: auto;
+
+$gallery-height: 16rem;
+
+.gallery {
+  height: $gallery-height + 1rem;
+  width: calc(100% + 1rem);
+  margin: $unit-lrg 0;
+  align-items: center;
+
+  * { max-height: $gallery-height; }
+  .landscape { aspect-ratio: 4/3; object-fit: cover; }
+  .portrait {  object-fit: cover; }
 }
 
 
 @include breakpoint(med) {
   .gallery {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(20ch, 1fr) );
     gap: $unit-sml;
     grid-auto-flow: dense;
+    grid-template-rows: 1fr;
 
-    * { max-height: 100vh;}
+    * { 
+      width: 100%;
+      max-height: 100vh;
+    }
 
      img.portrait{
+      aspect-ratio: 3/4.58;
       grid-row: span 2; 
    }
   }
@@ -64,10 +71,10 @@ main {
 
 @include breakpoint(lrg) {
   .gallery {
-    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(30ch, 1fr) );
     margin: $unit-lrg -30ch;
-  width: 120ch;
-  max-width: 120ch;
+    width: 120ch;
+    max-width: 120ch;
   }
 }
 
@@ -94,6 +101,7 @@ article {
 
 article > img, article > iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
+  max-width: 100%;
 }
 
 section {
