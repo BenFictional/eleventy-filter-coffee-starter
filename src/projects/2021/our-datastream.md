@@ -29,8 +29,8 @@ The complete list of data that Instagram harvests from their users is unsettling
 A huge forward-slash divides the installation in two, slicing apart the red string, and presenting alternative ways of monetizing and owning digital data. Data cooperatives and unions are an emerging type of business, with experiments in music streaming, healthcare, ridesharing, and other areas of the economy, these efforts let users own and even profit from their data. If big tech companies are making money off your browsing history, why shouldn't you? 
 
 <div class="gallery">
-{% img '2021/ds_viewers-wide.jpg', 'A wall of papers and framed objects in a gallery' %}
 {% img '2021/ds_phones.jpg', 'A wall of papers and framed objects in a gallery', 'p' %}
+{% img '2021/ds_viewers-wide.jpg', 'A wall of papers and framed objects in a gallery' %}
 {% img '2021/ds_wall-detail.jpg', 'A wall of papers and framed objects in a gallery' %}
 </div>
 

@@ -28,7 +28,7 @@ This intimate story uses modern web animations and 3D capabilities to supplement
 
 Random Access Memories is part of [Digital Fringe](https://fringearts.com/list-view/digital-fringe-2018/) in the 2018 Philadelphia Fringe festival.
 
-<div class="gallery">
+<div class="gallery single-row">
 {% img '2018/Card-flip_500.gif', 'Animation of punchcards with holes punched in different places' %}
 {% img '2018/ram-end-square.jpg', 'A 3D wireframe of a head' %}
 {% img '2018/card-stain.jpg', 'A generic image description'%}

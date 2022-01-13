@@ -72,14 +72,15 @@ section.base-grid .banner {
 .hero-text {
     order: 2;
     display: grid;
-    grid-template-rows: 18rem auto;
+    grid-template-rows: 23rem auto;
     position: relative;
     p {
         display: none;
         font-size: clamp($h4-size, 2.75vw, $h2-size);
         line-height: 1.2;
         max-width: 40ch;
-        margin: $unit-lrg auto;
+        // margin: $unit-lrg auto; // Need this?
+        align-self: center;
         &.active { display: block; }
     }
 }
@@ -232,7 +233,7 @@ section.featured-projects .card-list {
     grid-column: 1 / -1;
     // margin-left: -1rem;
     .card { 
-        width: calc(100% - 3rem);
+        width: calc(100% - 5rem);
         &:nth-of-type(1) {margin-left: $unit-med; }
         .project-meta { display: none; }
     }
@@ -481,6 +482,12 @@ section.featured-design {
     grid-template-rows: 1fr 1fr;
     gap: clamp($unit-sml, 2vw, $unit-med);
     margin-bottom: $unit-med;
+
+    img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 @include breakpoint(med) {

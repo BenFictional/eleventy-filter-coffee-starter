@@ -25,6 +25,7 @@ main {
       overflow-x: visible;
       height: auto;
   }
+  
 
   & > * {
     flex-shrink: 0;
@@ -35,7 +36,7 @@ main {
 } // end horizontal scroll
 
 
-$gallery-height: 16rem;
+$gallery-height: 14rem;
 
 .gallery {
   height: $gallery-height + 1rem;
@@ -43,6 +44,11 @@ $gallery-height: 16rem;
   margin: $unit-lrg 0;
   align-items: center;
 
+  &.single-row {
+    grid-auto-flow: unset;
+    grid-template-columns: repeat(auto-fit,minmax(15ch,1fr));
+  }
+  
   * { max-height: $gallery-height; }
   .landscape { aspect-ratio: 4/3; object-fit: cover; }
   .portrait {  object-fit: cover; }
@@ -51,6 +57,7 @@ $gallery-height: 16rem;
 
 @include breakpoint(med) {
   .gallery {
+    height: auto;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(20ch, 1fr) );
     gap: $unit-sml;
@@ -72,9 +79,9 @@ $gallery-height: 16rem;
 @include breakpoint(lrg) {
   .gallery {
     grid-template-columns: repeat( auto-fit, minmax(30ch, 1fr) );
-    margin: $unit-lrg -30ch;
-    width: 120ch;
-    max-width: 120ch;
+    margin: $unit-lrg -15ch;
+    width: 90ch;
+    max-width: 90ch;
   }
 }
 

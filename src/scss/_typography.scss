@@ -1,6 +1,9 @@
 body {
     font-family: $body-font;
     font-size: $base-font-size;
+    @include breakpoint(xl) {
+        font-size: $base-font-size * $ratio;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,7 +33,9 @@ p {
     line-height: 1.6;
 }
 
-article p { font-size: 20px; }
+@include breakpoint(med) { 
+    article p { font-size: 20px; }
+}
 
 ul, ol {
     margin-left: 1em;
