@@ -54,6 +54,19 @@ $gallery-height: 14rem;
   .portrait {  object-fit: cover; }
 }
 
+@media only screen and (max-width: $breakpoint-med) {
+  .duo {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    overflow-x: visible;
+    * { 
+      max-height: inherit; 
+      width: 100%;
+    }
+    *:last-of-type { margin-right: 0; }
+  }
+}
 
 @include breakpoint(med) {
   .gallery {
@@ -82,6 +95,7 @@ $gallery-height: 14rem;
     margin: $unit-lrg -15ch;
     width: 90ch;
     max-width: 90ch;
+    grid-gap: $unit-med;
   }
 }
 
@@ -109,6 +123,7 @@ article {
 article > img, article > iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
   max-width: 100%;
+  width: 100%;
 }
 
 section {
@@ -195,4 +210,9 @@ nav.footer-nav, .copyright {
     flex-direction: row;
     gap: $unit-med;
   }
+}
+
+article audio {
+  width: 30ch;
+  margin: $unit-med 0;
 }

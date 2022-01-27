@@ -11,6 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = (config) => {
 
   config.addPassthroughCopy('src/assets');
+  config.addPassthroughCopy('src/media');
   config.addPassthroughCopy('src/images');
 
   config.addPlugin(eleventyNavigationPlugin);
@@ -98,7 +99,7 @@ module.exports = (config) => {
 
   // Featured projects
   config.addCollection('featuredProjects', collection => {
-    return collection.getFilteredByGlob('./src/projects/*.md')
+    return collection.getFilteredByGlob('./src/projects/**/*.md')
       .filter(
         post => post.data.featured_project
       )

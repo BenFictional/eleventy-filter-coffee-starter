@@ -98,6 +98,10 @@
 
   }
 
+  .project .featured-image:hover {
+    opacity: 0.9;
+  }
+
   // TWO COLUMNS
   @include breakpoint(med) {
 
