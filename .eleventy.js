@@ -1,6 +1,6 @@
 const filters = require('./utils/filters.js');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-//Foo
+const slugify = require("slugify");
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -71,6 +71,19 @@ module.exports = (config) => {
   // Get current year
   config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+
+  // Slugs
+  config.addFilter("slug", (str) => {
+    if (!str) {
+      return;
+    }
+  
+    return slugify(str, {
+      lower: true,
+      replacement: '-'
+    });
+  });
+  
   // Project media list
   config.addFilter("uniqueMedia", (array) => {
     let media = new Set()

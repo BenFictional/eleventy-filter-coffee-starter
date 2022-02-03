@@ -1,4 +1,9 @@
-<li class="project card {{ post.data.project_type | slug }} 
+<li class="project card 
+
+  {% for item in post.data.project_type -%}
+    {{ item | slug }}
+  {%- endfor %}
+  
   {% for item in post.data.media %}
     {{ item | replace(" ", "-") }}
   {% endfor %}
