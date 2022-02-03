@@ -1,6 +1,6 @@
-<li class="project card {{ post.data.project_type }} 
+<li class="project card {{ post.data.project_type | slug }} 
   {% for item in post.data.media %}
-    {{ item }}
+    {{ item | replace(" ", "-") }}
   {% endfor %}
 ">
 
