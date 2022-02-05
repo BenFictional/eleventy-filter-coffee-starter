@@ -50,8 +50,14 @@ $gallery-height: 14rem;
   }
   
   * { max-height: $gallery-height; }
-  .landscape { aspect-ratio: 4/3; object-fit: cover; }
-  .portrait {  object-fit: cover; }
+  
+  .landscape { 
+    aspect-ratio: 4/3; 
+    object-fit: cover; }
+  .portrait { 
+     object-fit: cover; 
+     min-height: 100%;
+    }
 }
 
 @media only screen and (max-width: $breakpoint-med) {
@@ -92,7 +98,7 @@ $gallery-height: 14rem;
 @include breakpoint(lrg) {
   .gallery {
     grid-template-columns: repeat( auto-fit, minmax(30ch, 1fr) );
-    margin: $unit-lrg -15ch;
+    margin: $unit-xl -15ch;
     width: 90ch;
     max-width: 90ch;
     grid-gap: $unit-med;
@@ -120,10 +126,15 @@ article {
   }
 } // end article
 
-article > img, article > iframe  {
+article > img, article iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
   max-width: 100%;
   width: 100%;
+}
+
+article > iframe {
+  height: 100%;
+  aspect-ratio: 16/9;
 }
 
 section {

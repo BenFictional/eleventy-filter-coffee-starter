@@ -18,7 +18,7 @@
       <ul class="button-group" data-filter-group="project-type">
       <li><button class="is-checked" data-filter="" tabindex="0">All</button></li>
       {% for project_type in postslist | uniqueTypes %}
-        <li><button href="#" class="filter-button {{ project_type }}" data-filter=".{{ project_type }}" tabindex="0">{{ project_type }}</button></li>
+        <li><button href="#" class="filter-button {{ project_type | slug }}" data-filter=".{{ project_type | slug }}" tabindex="0">{{ project_type }}</button></li>
       {% endfor %}
     </ul>
     </div>

@@ -8,7 +8,8 @@
     padding-top: $unit-med;
   
     @include breakpoint(med) {
-      height: 6rem;
+      background-color: var(--surface);
+      box-shadow: 0 15px 15px -5px rgba(0,0,0,.1);
     }
 
     @include breakpoint(lrg) {
@@ -18,8 +19,6 @@
       position: sticky;
       top: 0;
       z-index: 2;
-      background-color: var(--surface);
-      box-shadow: 0 15px 15px -5px rgba(0,0,0,.1);
     }
   }
 
@@ -40,6 +39,7 @@
    flex-direction: row;
    list-style: none;
    flex-wrap: wrap;
+   max-width: 48ch;
   
    li { 
      text-transform: capitalize;
@@ -190,7 +190,7 @@
   .project.art .project-meta {
     background-color: var(--primary);
   }
-  .project.design .project-meta {
+  .project.client-design .project-meta {
     background-color: var(--secondary);
   }
   .project.life .project-meta {
@@ -204,7 +204,7 @@
       &.visible { display: block; }
   }
 
-  //////// INDIVIDUAL PROJECTS ///////////
+  //////// INDIVIDUAL PROJECT PAGES ///////////
 
   .project-entry header {
     margin-top: 0;
@@ -226,7 +226,7 @@
       text-transform: uppercase;
       line-height: 1;
       padding: $unit-sml;
-      transform:translateY(-0.25rem);
+      transform:translateY(-0.4rem);
     }
 
     ul {
@@ -239,6 +239,7 @@
     li { 
       text-transform: capitalize;
       margin-right: $unit-sml;
+      line-height: 1;
 
       &:after {
         content: "|";

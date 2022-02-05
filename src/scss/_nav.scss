@@ -52,7 +52,6 @@ nav.primary-nav {
 
 // Desktop menu
 @include breakpoint(med) {
-
     nav.primary-nav, nav.footer-nav {
         grid-template-columns: auto 1fr;
     
@@ -81,6 +80,10 @@ nav.primary-nav {
             margin: 0 $unit-med 0 auto;
         }
     }
+}
+
+@include breakpoint(xl) {
+    nav.primary-nav { padding: 2rem $unit-med $unit-med; }
 }
 
 .site-title{
