@@ -71,7 +71,7 @@
       background-color: var(--surface-emphasis);
       display: flex;
       flex-direction: column;
-      max-width: 40ch;
+      max-width: 35ch;
       box-shadow: $shadow;
     }
 
@@ -80,6 +80,7 @@
   // TIMELINE
   $nudge-sml: 9rem;
   $nudge-lrg: 18rem;
+  $nudge-xl: 27rem;
 
 
   .projects ul.timeline {
@@ -117,30 +118,33 @@
       .project { 
         height: auto; 
         &:nth-of-type(odd) {
-          // transform: translateY($nudge-sml);
-          margin-top: $nudge-sml;
+          margin-top: $nudge-lrg;
         }
       }
     }
   }
 
   // THREE COLUMNS
-  @include breakpoint(xl) {
+  @include breakpoint(lrg) {
     .projects ul.timeline { 
-      // margin-top: -$unit-lrg;
-      // padding-bottom: $nudge-lrg;
     
-    .project-sizer { height: 55rem; }
+    .project-sizer { height: 50rem; }
     .project, .project-sizer { width: calc(33.33% - 2rem); }
    
     .project {
       &:nth-of-type(odd) { margin-top: inherit; }
       &:nth-of-type(3n+0) { 
+        margin-top: $nudge-xl; 
+       }
+       &:nth-of-type(6n+0) { 
+        margin-top: $nudge-sml; 
+       }
+       &:nth-of-type(7n+0) { 
         margin-top: $nudge-lrg; 
        }
      }
 
-     } // end timeline
+     }
   }
   
   .project-meta {
