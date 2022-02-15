@@ -127,6 +127,7 @@
   // THREE COLUMNS
   @include breakpoint(lrg) {
     .projects ul.timeline { 
+      width: 85%;
     
     .project-sizer { height: 50rem; }
     .project, .project-sizer { width: calc(33.33% - 2rem); }
@@ -147,6 +148,10 @@
      }
   }
   
+  // PROJECT CARDS
+
+  
+
   .project-meta {
     display: flex;
     flex-direction: row;
@@ -194,12 +199,14 @@
   .project.art .project-meta {
     background-color: var(--primary);
   }
-  .project.client-design .project-meta {
-    background-color: var(--secondary);
+  .project.client-design {
+    .project-meta { background-color: var(--secondary); }
+  } 
+  .project.life {
+    .project-meta {  background-color: var(--tertiary); }
+    h2 { margin: $unit-sml 0; }
   }
-  .project.life .project-meta {
-    background-color: var(--tertiary);
-  }
+
 
   .no-results {
       display: none;

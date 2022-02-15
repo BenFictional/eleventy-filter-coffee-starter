@@ -126,6 +126,7 @@ article {
   }
 } // end article
 
+// GLOBAL MEDIA LAYOUT
 article > img, article iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
   max-width: 100%;
@@ -136,6 +137,15 @@ article > iframe {
   height: 100%;
   aspect-ratio: 16/9;
 }
+
+article video {
+  width: 100%;
+  @include breakpoint(lrg) {
+    width: auto;
+  }
+}
+
+
 
 section {
   padding: clamp($unit-med, 5vw, 12rem);
