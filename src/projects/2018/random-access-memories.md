@@ -22,7 +22,7 @@ An old stack of computer punch cards leads to an investigation of how memory int
 
 {% img '2018/wrapped-text-comp.jpg', 'Wrapped paper package with text overlay' %}
 
-## [Experience the story at the project website.](https://benjaminandrew.net/ram)
+## [Experience the story at the project website.](https://random-access-memories.netlify.app/)
 
 This intimate story uses modern web animations and 3D capabilities to supplement prose with real and imagined evidence, eventually taking a hard turn into science fiction.
 

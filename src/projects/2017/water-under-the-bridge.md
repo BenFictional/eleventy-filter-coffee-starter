@@ -18,7 +18,7 @@ media:
 
 Over the course of four months, I corresponded with Spanish bio-artist [Paz Tornero](https://vimeo.com/paztornero) for a virtual residency organized by the [SciArt Center](http://www.sciartcenter.org/) in New York. Inspired by out shared interests in environmental activism and scientific approaches to art, we developed [Water Under the Bridge](http://waterunderthebridge.net): a website designed to engage readers with the subject of water.
 
-## [View project website](https://benjaminandrew.net/water/)
+## [View project website](https://under-the-bridge.netlify.app/)
 
 The website is designed for a general audience and includes guides to municipal water treatment, common contaminants, and threats to water supplies. We began the project with an online survey to see what people knew about their water, and how people interacted with this essential resource on a day-to-day basis. The survey proved a hunch: that most people don't know the details about where their water comes from, or what's in it. For something so integral to life and science, the infrastructure and chemistry of water is relatively invisible, something that drew us to the subject as we imagined what an online resource might look like.
 

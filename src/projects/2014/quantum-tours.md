@@ -22,7 +22,7 @@ Quantum Tours Americana is the premiere time travel tourism service of Earth, pr
 
 These stories bring new perspectives to Ballston, as lush sound effects and music recreate what it was like to stroll through the early days of the American settlers or the bustling streets of the far future. Guiding listeners through these disparate elements are Quantum Tour Guides Rick Vallance and his artificial intelligence program. Their narrations are combined with contemporary and historical recordings to touch on subjects like sustainability, technology, and community. Experience this rich mix of fantasy and history at quantum-tours.com or download the iOS app.
 
-Visit the [project's website](http://quantum-tours.com) \(circa 2014\) to listen to all the tours.
+Visit the [project's website](https://quantum-tours.netlify.app/) \(circa 2014\) to listen to all the tours.
 
 <div class="gallery single-row">
 	{% img '2017/quantum-sidewalk.jpg', 'Sidewalk decal and streetpost sign in a city street' %}

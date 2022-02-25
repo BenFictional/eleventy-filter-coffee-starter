@@ -18,7 +18,7 @@ media:
 {% img '/2017/peoples-social-card-trans-1.png', "People's Production Logo and illustrated figures" %}
 
 
-Want to make a movie? That typically daunting idea was broken apart and put on display for several weeks at Penn State University, where students, staff, and faculty were invited to participate in the production of a crowd-sourced movie. Everything from story writing, to acting, to sound recording was presented as participatory art in and around the Borland Project Space. The goal was to involve as many people as possible, lowering the barriers to entry all the way to the ground and revealing the intricacies of filmmaking to the public.
+Want to make a movie? That typically daunting idea was broken apart and put on display for several weeks at Penn State University, where students, staff, and faculty were invited to participate in the production of a crowd-sourced movie. Everything from story writing, to acting, to sound recording was presented as participatory art in and around the Borland Project Space. The goal was to involve as many people as possible, lowering the barriers to entry all the way to the ground and revealing the intricacies of filmmaking to the public. A [project website](https://peoples-production.netlify.app/) included live updates and schedules, and now exists as showcase of th project's branding design.
 
 <iframe src="https://player.vimeo.com/video/253311302?h=abe0107687" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
