@@ -56,13 +56,15 @@ module.exports = (config) => {
   // Image shortcode
   config.addShortcode('img', function (path, alt, aspect) {
 
-      // Can we leave 'aspect' undefined (and put it third?) 
+    // If the shortcode defines aspect as 'p' » set ratio="portrait", otherwise it's "landscape"
       var ratio = (aspect =="p") ? "portrait":"landscape";
 
-      if (process.env.NODE_ENV === 'production') {
+      // Only run in production mode
+      if (process.env.PROD === 'true') {
       return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://ba-test.netlify.app/images/${path}" alt="${alt}" class="${ ratio }">`
       }
 
+      // Local dev
       else {
       return `<img src="/images/${path}" alt="${alt}" class="${ ratio }">`
       }

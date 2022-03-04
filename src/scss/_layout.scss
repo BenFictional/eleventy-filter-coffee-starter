@@ -148,6 +148,12 @@ article video {
 article .article-header {
   margin-top: 0;
   margin-bottom: $unit-lrg;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4/2.5;
+    object-fit: cover;
+  }
 }
 .article-header .project-meta {
   display: flex;
@@ -225,7 +231,17 @@ article .article-header {
   } 
 }
 
-
+article {
+  code { font-size: $small-font-size; }
+  pre, code {
+    background-color: var(--element-subtle);
+    padding: $unit-xsml;
+  }
+  pre {  
+    padding: $unit-med;
+    white-space: pre-wrap; 
+   }
+}
 
 
 

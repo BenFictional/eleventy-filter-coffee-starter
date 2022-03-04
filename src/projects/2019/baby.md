@@ -1,6 +1,6 @@
 ---
 layout: layouts/project.html
-title: Had a baby
+title: Became a parent
 description: Folks, not much is getting done for a while.
 date: 2019-01-01
 location: State College

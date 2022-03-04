@@ -2,7 +2,7 @@
 layout: layouts/project.html
 title: Chronoecology Corps
 description: Time-traveling naturalist performances and world-building
-date: 2013-05-22
+date: 2013-01-22
 location: Baltimore
 featured_image: /images/2017/chronoecology-cart-1920x1280.jpg
 featured_alt: Three people wearing lab coats talking to a women while pushing a white hand cart.
