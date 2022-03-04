@@ -92,6 +92,8 @@ $unit-sml: .5rem;
 $unit-med: 1rem;
 $unit-lrg: 3rem;
 $unit-xl: 6rem;
+$unit-xxl: 9rem;
+$unit-xxxl: 18rem;
 $global-border: $unit-sml;
 $shadow: 1px 1px 6px rgba(0,0,0,0.15);
 
@@ -114,6 +116,13 @@ $breakpoint-xl: 1600px;
   @if $point == xl {
     @media(min-width: $breakpoint-xl) { @content; }
   } 
+}
+
+// Helper variable
+body {
+  --screensize: "sml";
+  @include breakpoint(med) { --screensize: "med"; }
+  @include breakpoint(lrg) { --screensize: "lrg"; }
 }
 
 // BUTTONS

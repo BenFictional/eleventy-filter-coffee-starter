@@ -28,7 +28,7 @@
       <ul class="button-group" data-filter-group="media">
         <li><button class="is-checked" data-filter="" tabindex="0">All</button></li>
       {% for media in postslist | uniqueMedia %}
-        <li><button href="#" class="filter-button {{ media }}" data-filter=".{{ media }}" tabindex="0">{{ media }}</button></li>
+        <li><button href="#" class="filter-button {{ media | slug }}" data-filter=".{{ media | slug }}" tabindex="0">{{ media }}</button></li>
       {% endfor %}
       </ul>  
     </div>

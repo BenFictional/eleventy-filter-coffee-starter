@@ -1,6 +1,6 @@
  .projects article {
    text-align: center;
-   margin-bottom: $unit-lrg;
+   margin-bottom: $unit-med;
  }
  
  // Nav filters
@@ -78,22 +78,20 @@
 
 
   // TIMELINE
-  $nudge-sml: 9rem;
-  $nudge-lrg: 18rem;
-  $nudge-xl: 27rem;
-
 
   .projects ul.timeline {
     position: relative;
     z-index: 1;
-    padding-bottom: $nudge-sml;
+    padding-bottom: $unit-xxl;
+    padding-top: $unit-lrg;
     max-width: 150ch;
     margin: -$unit-med auto 0;
 
-    .project-sizer, .project { height: 90vh; }
+    // .project-sizer, .project { height: 90vh; }
 
     .project, .project-sizer {
-      width: calc(100vw - 3rem);
+      width: 100%;
+      max-width: calc(100% - 2rem);
       margin: $unit-med;
     }
 
@@ -112,13 +110,16 @@
       background-repeat: repeat-y;
       background-size: 44px;
 
-      .project-sizer { height: 45rem; }
-      .project, .project-sizer { width: calc(50% - 2rem); }
+      // .project-sizer { height: 45rem; }
+      .project, .project-sizer {
+         width: calc(50% - 2rem); 
+         margin-bottom: $unit-lrg;
+        }
 
       .project { 
         height: auto; 
         &:nth-of-type(odd) {
-          margin-top: $nudge-lrg;
+          margin-top: $unit-xl;
         }
       }
     }
@@ -128,29 +129,26 @@
   @include breakpoint(lrg) {
     .projects ul.timeline { 
       width: 85%;
+      padding-top: $unit-xxl;
     
     .project-sizer { height: 50rem; }
     .project, .project-sizer { width: calc(33.33% - 2rem); }
    
-    .project {
-      &:nth-of-type(odd) { margin-top: inherit; }
-      &:nth-of-type(3n+0) { 
-        margin-top: $nudge-xl; 
-       }
-       &:nth-of-type(6n+0) { 
-        margin-top: $nudge-sml; 
-       } 
-       &:nth-of-type(7n+0) { 
-        margin-top: $nudge-lrg; 
-       }
-     }
-
+      .project {
+        margin-bottom: $unit-xl; 
+        &:nth-of-type(odd) { margin-top: inherit; }
+        &:nth-of-type(3n+0) { 
+          margin-bottom:  $unit-xxl;
+          
+        }
+        &:nth-of-type(6n+0) { 
+          margin-top: $unit-xxxl;
+        } 
+      }
      }
   }
   
   // PROJECT CARDS
-
-  
 
   .project-meta {
     display: flex;
@@ -215,78 +213,4 @@
       &.visible { display: block; }
   }
 
-  //////// INDIVIDUAL PROJECT PAGES ///////////
-
-  .project-entry header {
-    margin-top: 0;
-  }
-  .project-entry .project-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $unit-med;
-    justify-content: center;
-
-    h1 { 
-      flex-basis: 100%;
-      margin-bottom: $unit-med;
-     }
-
-    .project-type {
-      background-color: var(--primary);
-      color: $light;
-      text-transform: uppercase;
-      line-height: 1;
-      padding: $unit-sml;
-      transform:translateY(-0.4rem);
-    }
-
-    ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 0 $unit-lrg;
-    }
-
-    li { 
-      text-transform: capitalize;
-      margin-right: $unit-sml;
-      line-height: 1;
-
-      &:after {
-        content: "|";
-        margin-left: $unit-sml;
-        color: var(--element-subtle);
-      }
-      &:last-of-type:after { 
-        content: "";
-        margin-left: 0;
-       }
-
-     }
-  }
-
-  @include breakpoint(lrg) {
-
-    $project-margin: 5rem;
-
-    .project-entry header img {
-      object-fit: cover;
-      margin: 0 auto;
-    }
-
-    .project-entry header {
-      position: relative;
-      margin-bottom: $project-margin + $unit-lrg;
-
-      .page-title { text-align: left; }
-      .project-meta {
-        justify-content: flex-start;
-        position: absolute;
-        bottom: -$project-margin;
-        left: -$unit-med;
-        width: 75%;
-        background-color: var(--surface);
-      }
-    } 
-  }
-
+  

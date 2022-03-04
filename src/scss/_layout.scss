@@ -11,8 +11,6 @@ main {
 
 // GALLERIES AND HORIZONTAL SCROLL
 
-
-
 .horizontal-scroll, .gallery {
   display: flex;
   flex-direction: row;
@@ -115,7 +113,7 @@ $gallery-height: 14rem;
 article {
   max-width: $article-width;
   padding: $unit-med;
-  margin: $unit-lrg auto 6rem;
+  margin: $unit-med auto 6rem;
 
   &.wide {
     max-width: 75ch;
@@ -144,6 +142,91 @@ article video {
     width: auto;
   }
 }
+
+//////// INDIVIDUAL PROJECT PAGES & BLOG POSTS ///////////
+
+article .article-header {
+  margin-top: 0;
+  margin-bottom: $unit-lrg;
+}
+.article-header .project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $unit-med;
+  justify-content: center;
+
+  h1 { 
+    flex-basis: 100%;
+    margin-bottom: $unit-med;
+   }
+
+  .project-type, .post-category {
+    color: $light;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: $unit-sml;
+    transform:translateY(-0.4rem);
+
+    &.art { background-color: var(--primary); }
+    &.client, &.client-design { background-color: var(--secondary); }
+  }
+  
+
+
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 $unit-lrg;
+  }
+
+  li { 
+    text-transform: capitalize;
+    margin-right: $unit-sml;
+    line-height: 1;
+
+    &:after {
+      content: "|";
+      margin-left: $unit-sml;
+      color: var(--element-subtle);
+    }
+    &:last-of-type:after { 
+      content: "";
+      margin-left: 0;
+     }
+
+   }
+}
+
+@include breakpoint(lrg) {
+
+  $project-margin: 5rem;
+
+  .article-header img {
+    object-fit: cover;
+    margin: 0 auto 9rem;
+    width: 100%;
+  }
+
+  .article-header {
+    position: relative;
+    margin-bottom: $project-margin + $unit-lrg;
+
+    .page-title { text-align: left; }
+    .project-meta {
+      justify-content: flex-start;
+      position: absolute;
+      bottom: -$project-margin;
+      left: -$unit-med;
+      width: 75%;
+      background-color: var(--surface);
+    }
+  } 
+}
+
+
+
 
 
 

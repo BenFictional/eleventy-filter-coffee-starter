@@ -31,7 +31,7 @@
       
         {# TITLE #}
         {% if post.data.project_type.includes("life") %}
-            <h2>{{ post.data.title }}</h2>
+            <h2 class="project-title">{{ post.data.title }}</h2>
         {% else %}
             <a class="project-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
         {% endif %}

@@ -3,9 +3,25 @@
 
 {% block content %}
 <article class="post">
-    {# IMAGE #}
-    <img class="featured-image" src="{{ featured_image}}" alt="{{ featured_alt }}">
-    <h1 class="page-title"> {{ title }}</h1>
+    <header class="align-wide article-header">
+        <img class="featured-image" src="{{ featured_image}}" alt="{{ featured_alt }}">
+
+        <div class="project-meta">
+                {# Title #}
+            <h1 class="page-title"> {{ title }}</h1>
+
+            {# Location #}
+            {% if category %}
+                <span class="post-category {{ category }}">{{ category }}</span>
+            {% endif %}
+
+            {# Year #}
+            <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ date | readableDate  }}</time>
+
+        </div>
+        
+    </header>
+
     {{ content | safe}}
 </article>
 {% endblock %}

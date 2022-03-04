@@ -49,7 +49,7 @@
     &.news {
       background-color: var(--secondary);
     }
-    &.writing {
+    &.criticism {
       background-color: var(--accent);
     }
   }
@@ -64,11 +64,15 @@
       .post-image { 
         margin-right: $unit-med;
         margin-bottom: 0;
-        // max-width: 30ch;
+        max-width: 30ch;
+
+        img {
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+          width: 100%;
+        }
+       
        }
     }
   }
   
-  .blog .post-image {
-    max-width: 30ch;
-  }
