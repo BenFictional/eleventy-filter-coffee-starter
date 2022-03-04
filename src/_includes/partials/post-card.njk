@@ -1,5 +1,9 @@
 <li class="post-item">
-      <a class="post-image" href="{{ post.url | url }}"><img class="featured-image" src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}"></a>
+      <a class="post-image" href="{{ post.url | url }}">
+        {% set featuredImage = post.data.featured_image %}
+        {% set featuredAlt = post.data.featured_alt %}
+        {% img ''+featuredImage, ''+featuredAlt %} 
+      </a>
 
       <div class="post-text">
         <a class="post-title" href="{{ post.url | url }}">{{ post.data.title }}</a>

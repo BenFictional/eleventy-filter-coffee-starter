@@ -4,7 +4,7 @@ title: Our Datastream
 description:  An illustrated guide to data economies and emerging cooperatives.
 date: 2021-07-01
 location: State College
-featured_image: /images/2021/ds_coffee.jpg
+featured_image: /2021/ds_coffee.jpg
 featured_alt: Printed lists and framed objects on a wall with red string.
 featured_project: true
 tags: 

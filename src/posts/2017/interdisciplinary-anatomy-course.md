@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: Interdiciplinary Anatomy Course
 description:  A new collaborative course at Penn State
 date: 2017-04-26
-featured_image: /images/2017/library-vesalius-web.jpg
+featured_image: /2017/library-vesalius-web.jpg
 category: 
     - news
 ---

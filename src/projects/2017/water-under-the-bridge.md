@@ -4,7 +4,7 @@ title: Water Under the Bridge
 description: Collaborative resource for water activism and education
 date: 2017-01-11
 location: Online
-featured_image: /images/2017/water-profiler-web.jpg
+featured_image: /2017/water-profiler-web.jpg
 featured_alt: 3D rendering of a high-tech water filter on a kitchen sink
 featured_project: false
 tags: 

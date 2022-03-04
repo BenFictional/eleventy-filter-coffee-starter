@@ -4,7 +4,7 @@ title: Field Station at emerge
 description: Time-traveling naturalist performances and world-building
 date: 2013-10-22
 location: Baltimore
-featured_image: /images/2017/MG_6341-2.jpg
+featured_image: /2017/MG_6341-2.jpg
 featured_alt: Three people wearing lab coats talking to a women while pushing a white hand cart.
 featured_project: false
 tags: 

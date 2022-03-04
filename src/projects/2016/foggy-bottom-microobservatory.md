@@ -4,7 +4,7 @@ title: Foggy Bottom Microobservatory
 description: Sculptural investigation of local microorganisms and daily web series
 date: 2016-07-05
 location: Washington D.C.
-featured_image: /images/2017/benjamin-andrew-foggy-bottom-microobservatory-workshop-1920x1280.jpg
+featured_image: /2017/benjamin-andrew-foggy-bottom-microobservatory-workshop-1920x1280.jpg
 featured_alt: A group of people in an outdoors park, pouring red liquid from a bottle.
 featured_project: false
 tags: 

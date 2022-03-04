@@ -4,7 +4,7 @@ title: The Lost Adventures of Matthew Fontaine Maury
 description: Pseudo-historical storytelling from the archives of Chronoecology
 date: 2014-04-14
 location: Arlington
-featured_image: /images/2017/N6H7687.jpg
+featured_image: /2017/N6H7687.jpg
 featured_alt: A photo of a woman holding a smartphone while standing on a round sidewalk decal.
 featured_project: false
 tags: 

@@ -4,7 +4,7 @@ title: Random Access Memories
 description:  Chicharrones neutra listicle beard snackwave quinoa viral squid tacos single-origin coffee
 date: 2018-09-06
 location: Online
-featured_image: /images/2018/punchcard-hero.jpg
+featured_image: /2018/punchcard-hero.jpg
 featured_alt: A 3d rendering of computer punchcards.
 featured_project: true
 tags: 

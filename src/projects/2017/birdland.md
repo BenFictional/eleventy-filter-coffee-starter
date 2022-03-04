@@ -4,7 +4,7 @@ title: Birdland in the Anthropocene
 description: Experimental videos presenting wildlife in a historical museum.
 date: 2017-01-01
 location: Baltimore
-featured_image: /images/2017/gallery-hawk-wide.jpg
+featured_image: /2017/gallery-hawk-wide.jpg
 featured_alt: A ghostly bird floating in a dark room
 featured_project: false
 tags: 

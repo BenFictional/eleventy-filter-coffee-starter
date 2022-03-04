@@ -4,7 +4,7 @@ title: People's Production
 description: Crowd-sourced filmmaking and participatory art.
 date: 2017-12-21
 location: State College
-featured_image: /images/2017/story-wall-writing-2.jpg
+featured_image: /2017/story-wall-writing-2.jpg
 featured_alt: A woman writing on a huge wall of paper
 featured_project: true
 tags: projects

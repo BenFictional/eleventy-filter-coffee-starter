@@ -3,7 +3,7 @@ layout: layouts/project.html
 title: Marc Friedenberg for Congress
 description: Campaign branding and creative direction
 date: 2018-11-01
-featured_image: /images/2018/marc-crowd.jpg
+featured_image: /2018/marc-crowd.jpg
 featured_alt: A white man in a tie speaking at a podium, surrounded by people holding signs that say Marc
 featured_project: false
 tags: 

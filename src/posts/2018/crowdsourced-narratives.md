@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: Crowdsourced Narratives & Participatory Art
 description: An essay on audience participation and art.
 date: 2018-04-12
-featured_image: /images/2018/jackson-hobbit-fans.jpg
+featured_image: /2018/jackson-hobbit-fans.jpg
 category: 
     - criticism
 

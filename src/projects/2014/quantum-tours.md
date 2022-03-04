@@ -4,7 +4,7 @@ title: Quantum Tours Americana
 description: The world's premiere time travel service and audio tours.
 date: 2014-11-28
 location: Arlington
-featured_image: /images/2017/quantum-holding-app.jpg
+featured_image: /2017/quantum-holding-app.jpg
 featured_alt: A photo of a woman holding a smartphone while standing on a round sidewalk decal.
 featured_project: false
 tags: 

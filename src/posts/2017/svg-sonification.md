@@ -3,7 +3,7 @@ layout: layouts/post.html
 title: SVG Sonification
 description:  How to turn vector drawings into MIDI instrumentation
 date: 2017-06-19
-featured_image: /images/2017/sw-midi.png
+featured_image: /2017/sw-midi.png
 category: 
     - tutorials
 ---

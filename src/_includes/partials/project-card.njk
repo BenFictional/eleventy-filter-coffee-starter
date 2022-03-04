@@ -25,7 +25,11 @@
       </ul>
 
       {# IMAGE #}
-      <a class="featured-image" href ="{{ post.url | url }}"><img  src="{{ post.data.featured_image}}" alt="{{ post.data.featured_alt }}"></a>
+      <a class="featured-image" href ="{{ post.url | url }}">
+        {% set featuredImage = post.data.featured_image %}
+        {% set featuredAlt = post.data.featured_alt %}
+        {% img ''+featuredImage, ''+featuredAlt %} 
+      </a>
 
       <div class="project-text">
       

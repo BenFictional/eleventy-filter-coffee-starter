@@ -4,7 +4,7 @@ title: Zero Tide
 description: Cyborg turtles transcend the physical plane in this multimedia comic. 
 date: 2015-04-22
 location: Baltimore
-featured_image: /images/2017/zero-tide-mesa-computer-benjamin-andrew.jpg
+featured_image: /2017/zero-tide-mesa-computer-benjamin-andrew.jpg
 featured_alt: A digital illustration of a turtle approaching computer hardware
 featured_project: false
 tags: 

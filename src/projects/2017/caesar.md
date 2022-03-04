@@ -3,7 +3,7 @@ layout: layouts/project.html
 title: CAESAR Mission Proposal
 description: Branding for proposed NASA mission
 date: 2018-08-14
-featured_image: /images/2018/caesar-promo-50.jpg
+featured_image: /2018/caesar-promo-50.jpg
 featured_alt: A spacecraft and blue teal logo reading CAESAR with intersecting rings. 
 featured_project: false
 tags: 
