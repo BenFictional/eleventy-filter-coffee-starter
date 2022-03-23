@@ -150,6 +150,11 @@
   
   // PROJECT CARDS
 
+  .project .featured-image img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
   .project-meta {
     display: flex;
     flex-direction: row;

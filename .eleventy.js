@@ -119,7 +119,7 @@ module.exports = (config) => {
         post => post.data.featured_project
       )
       .sort((a,b) => {
-        return a.data.post_weight - b.data.post_weight;
+        return b.data.date - a.data.date;
       });
    });
 

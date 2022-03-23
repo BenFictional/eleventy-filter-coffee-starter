@@ -4,7 +4,7 @@ title: Story Scores
 description: Crowd-sourced filmmaking and participatory art.
 date: 2017-06-20
 location: State College
-featured_image: /images/2017/gallery-view-web.jpg
+featured_image: /2017/gallery-view-web.jpg
 featured_alt: Frames prints in a gallery with headphones hanging below each one.
 featured_project: false
 tags: 

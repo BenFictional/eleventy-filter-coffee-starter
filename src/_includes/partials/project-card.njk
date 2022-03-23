@@ -28,7 +28,9 @@
       <a class="featured-image" href ="{{ post.url | url }}">
         {% set featuredImage = post.data.featured_image %}
         {% set featuredAlt = post.data.featured_alt %}
-        {% img ''+featuredImage, ''+featuredAlt %} 
+        {% if featuredImage %}
+          {% img ''+featuredImage, ''+featuredAlt %} 
+        {% endif %}
       </a>
 
       <div class="project-text">
