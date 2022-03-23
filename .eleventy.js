@@ -61,7 +61,7 @@ module.exports = (config) => {
 
       // Only run in production mode
       if (process.env.PROD === 'true') {
-      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://ba-test.netlify.app/images/${path}" alt="${alt}" class="${ ratio }">`
+      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://benjaminandrew.net/images/${path}" alt="${alt}" class="${ ratio }">`
       }
 
       // Local dev
