@@ -1,7 +1,7 @@
 ---
 layout: layouts/project.html
 title: Random Access Memories
-description:  Chicharrones neutra listicle beard snackwave quinoa viral squid tacos single-origin coffee
+description:  Immersive web fiction about mysterious computer punchcards. 
 date: 2018-09-06
 location: Online
 featured_image: /2018/punchcard-hero.jpg
