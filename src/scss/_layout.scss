@@ -144,8 +144,10 @@ article > iframe {
 
 article video {
   width: 100%;
+  margin: $unit-lrg 0;
+
   @include breakpoint(lrg) {
-    width: auto;
+    &.align-wide { width: calc(100% + 15vw); }
   }
 }
 
@@ -237,17 +239,7 @@ article .article-header {
   } 
 }
 
-article {
-  code { font-size: $small-font-size; }
-  pre, code {
-    background-color: var(--element-subtle);
-    padding: $unit-xsml;
-  }
-  pre {  
-    padding: $unit-med;
-    white-space: pre-wrap; 
-   }
-}
+article code { font-size: $small-font-size; }
 
 
 
@@ -342,3 +334,4 @@ article audio {
   width: 30ch;
   margin: $unit-med 0;
 }
+

@@ -63,7 +63,7 @@ layout: 'layouts/home.html'
 
     <ul class="featured-blog-list">
         {# Set for all #}
-    {% set bloglist = collections.posts %}
+    {% set bloglist = collections.posts | reverse %}
  {% for post in bloglist %}
     {# Limit to two projects #}
     {% if loop.index0 < 2 %}
