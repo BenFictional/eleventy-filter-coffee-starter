@@ -12,12 +12,12 @@
    
     <style> {% include "css/critical.css" %} </style>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark-dimmed.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark-dimmed.min.css">
     
     {# Add facility for pages to delare an array of critical styles #}
     {% if pageCriticalStyles %}
       {% for item in pageCriticalStyles %}
-        <style>{% include item %}</l>
+        <style>{% include item %}</style>
       {% endfor %}
     {% endif %}
 
@@ -31,6 +31,17 @@
     {% include "partials/meta-info.html" %}
 
     <title>{{ site.title }}</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVLBJ1KWWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MVLBJ1KWWH');
+    </script>
+
   </head>
   <body class="light-theme">
     {% include "partials/navigation.njk" %}
@@ -39,8 +50,10 @@
     </main>
     {% include "partials/footer.njk" %}
 
-    <script type="javascript" src="/js/theme-toggle-min.js"></script>
+    {# SCRIPTS #}
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script type="text/javascript" src="/js/theme-toggle-min.js"></script>
+
   </body>
 </html>
