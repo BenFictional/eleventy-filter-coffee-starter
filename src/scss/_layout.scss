@@ -8,12 +8,6 @@ main {
   flex: 1 0 auto;
 }
 
-// FOR ALL IMAGES EVERYWHERE
-.landscape {
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  width: 100%;
-}
 
 // GALLERIES AND HORIZONTAL SCROLL
 
@@ -134,12 +128,13 @@ article {
 article > img, article iframe  {
   margin: clamp($unit-med, 5vw, $unit-lrg) auto;
   max-width: 100%;
-  width: 100%;
+  
 }
 
 article > iframe {
   height: 100%;
   aspect-ratio: 16/9;
+  width: 100%;
 }
 
 article video {

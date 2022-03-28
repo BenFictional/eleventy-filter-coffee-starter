@@ -2,7 +2,10 @@ nav.primary-nav, nav.footer-nav {
     width: 100%;
 
     .nav-item {
-        margin: 0 $unit-med $unit-sml;
+        margin: 0 $unit-sml $unit-sml;
+        @include breakpoint(lrg) {
+            margin: 0 clamp($unit-med, 3vw, $unit-lrg) $unit-sml;
+        }
     }
 
     a.nav-link { 
@@ -29,20 +32,32 @@ nav.primary-nav {
 
     a { color: var(--element); }
     
+    .nav-menu, .nav-menu * {
+        transition: opacity .25s ease, max-height .25s ease, transform .15s ease;
+    }
     .nav-menu {
         max-height: 0;
         opacity: 0;
         transform-origin: top;
-        transition: opacity .25s ease, max-height .25s ease, transform .15s ease;
         visibility: hidden;
+        width: 100vw;
+
+        * {
+            text-align: center;
+        }
 
         &.showMenu {
             visibility: visible;
             display: flex;
             opacity: 1;
             max-height: 1000px;   
+            margin-left: -$unit-sml;
+            padding: $unit-med;
+            background: linear-gradient( var(--surface), var(--surface-shadow));
 
-            .theme-toggle { margin-top: $unit-sml; }
+            .nav-item { text-align: center; }
+
+            
           } 
         
         
@@ -123,7 +138,9 @@ nav.primary-nav {
 .color-mode__btn {
     font-size: $small-font-size;
     margin-top: -0.33rem;
+    margin: 0 auto; 
     box-shadow: none;
+    padding: .25rem 1rem .25rem .5rem;
 }
 .dark--hidden {
     background-color: var(--element);

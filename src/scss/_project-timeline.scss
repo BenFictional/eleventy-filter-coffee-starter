@@ -191,10 +191,13 @@
 
     .project-title {  
       display: inline-block;
-      font-size: clamp($h4-size, 5vw, $h3-size);
+      font-family: $body-font;
+      font-size: clamp($h5-size, 3vw, $h3-size);
       margin-bottom: $unit-med;
       line-height: 1;
       margin-bottom: $unit-sml;
+      // word-break: break-all;
+      overflow-wrap: anywhere;
      }
   }
 

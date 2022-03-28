@@ -23,6 +23,7 @@ $accent: #41A491;
 :root[color-mode="light"] {
   --surface: #{ $paper };
   --surface-emphasis: #{ $light };
+  --surface-shadow: #{ scale-color($paper, $lightness: -5%, $saturation: -50%) };
   --element: #{ $dark };
   --element-subtle: #{ $gray };
 
@@ -46,6 +47,7 @@ $accent: #41A491;
 :root[color-mode="dark"] {
   --surface: #{ $dark };
   --surface-emphasis: #{ $extra-dark-gray };
+  --surface-shadow: #{ darken($dark, 5%) };
   --element: #{ $paper };
   --element-subtle: #{ $extra-dark-gray };
 
@@ -102,7 +104,7 @@ $wide-width: 90ch;
 $align-wide: $unit-lrg calc(15% - 15vw);
 
 // BREAKPOINTS
-$breakpoint-med: 640px;
+$breakpoint-med: 725px;
 $breakpoint-lrg: 1000px;
 $breakpoint-xl: 1600px;
 
