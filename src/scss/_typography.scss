@@ -36,10 +36,6 @@ p {
     line-height: 1.6;
 }
 
-@include breakpoint(med) { 
-    article p { font-size: 20px; }
-}
-
 ul, ol {
     margin-left: 1em;
     line-height: 1.25;
