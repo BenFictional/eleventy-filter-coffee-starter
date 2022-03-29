@@ -2,7 +2,7 @@ body {
     font-family: $body-font;
     font-size: $base-font-size;
     @include breakpoint(xl) {
-        font-size: $base-font-size * $ratio;
+        font-size: 20px;
     }
 }
 
@@ -44,6 +44,11 @@ ul, ol {
 
 ul { list-style: square; }
 
+article {
+    @include breakpoint(xl) {
+        font-size: $base-font-size * $ratio;
+    }
+}
 
 // DARK MODE
 :root[color-mode="dark"] {

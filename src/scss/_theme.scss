@@ -99,7 +99,7 @@ $unit-xxxl: 18rem;
 $global-border: $unit-sml;
 $shadow: 1px 1px 6px rgba(0,0,0,0.15);
 
-$article-width: 60ch;
+$article-width: min(60ch, 720px);
 $wide-width: 90ch;
 $align-wide: $unit-lrg calc(15% - 15vw);
 
