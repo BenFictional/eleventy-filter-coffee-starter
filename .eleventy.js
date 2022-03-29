@@ -54,14 +54,15 @@ module.exports = (config) => {
   });
 
   // Image shortcode
-  config.addShortcode('img', function (path, alt, aspect) {
+  config.addShortcode('img', function (path, alt, aspect, size) {
 
     // If the shortcode defines aspect as 'p' » set ratio="portrait", otherwise it's "landscape"
       var ratio = (aspect =="p") ? "portrait":"landscape";
+      var imageSize = (size =="small") ? "w_480":"";
 
       // Only run in production mode
       if (process.env.PROD === 'true') {
-      return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto/https://benjaminandrew.net/images/${path}" alt="${alt}" class="${ ratio }">`
+          return `<img src="https://res.cloudinary.com/benjand/image/fetch/q_auto,f_auto,${imageSize}/https://benjaminandrew.net/images/${path}" alt="${alt}" class="${ ratio }">`
       }
 
       // Local dev
