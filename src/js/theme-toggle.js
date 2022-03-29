@@ -1,5 +1,6 @@
 // THEME TOGGLE
 
+// Toggle
 if (window.CSS && CSS.supports("color", "var(--primary)")) {
   var toggleColorMode = function toggleColorMode(e) {
     // Switch to Light Mode
@@ -29,7 +30,7 @@ if (window.CSS && CSS.supports("color", "var(--primary)")) {
 }
 
 
-// MOBILE MENU 
+//////////////  MOBILE MENU //////////////////
 var menu = document.querySelector(".primary-nav > .nav-menu");
 var ham = document.querySelector(".nav-toggle");
 var xIcon = document.querySelector(".close");

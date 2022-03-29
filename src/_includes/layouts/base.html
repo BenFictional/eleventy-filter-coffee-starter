@@ -31,6 +31,9 @@
 
     <title>{{ site.title }}</title>
 
+    {# Check theme against local storage or system preference #}
+    <script type="text/javascript" src="/js/theme-check-min.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVLBJ1KWWH"></script>
     <script>
@@ -39,19 +42,19 @@
       gtag('js', new Date());
 
       gtag('config', 'G-MVLBJ1KWWH');
-    </script>
-
+    </script> 
   </head>
+
   <body class="light-theme">
+    
+
     {% include "partials/navigation.njk" %}
     <main class="{{ title | lower }}">
     {% block content %}{% endblock%}
     </main>
-    {% include "partials/footer.njk" %}
+    {% include "partials/footer.njk" %}  
 
-    {# SCRIPTS #}
-    <script>hljs.highlightAll();</script>
+    <!-- Theme toggle -->
     <script type="text/javascript" src="/js/theme-toggle-min.js"></script>
-
   </body>
 </html>
