@@ -58,7 +58,7 @@ module.exports = (config) => {
 
     // If the shortcode defines aspect as 'p' » set ratio="portrait", otherwise it's "landscape"
       var ratio = (aspect =="p") ? "portrait":"landscape";
-      var imageSize = (size =="small") ? ",w_480":"";
+      var imageSize = (size =="small") ? ",w_400":"";
 
       // Only run in production mode
       if (process.env.PROD === 'true') {
