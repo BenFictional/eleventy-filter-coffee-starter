@@ -56,11 +56,7 @@ nav.primary-nav {
             background: linear-gradient( var(--surface), var(--surface-shadow));
 
             .nav-item { text-align: center; }
-
-            
           } 
-        
-        
     }
 }
 
@@ -77,6 +73,7 @@ nav.primary-nav {
         flex-direction: row;
         align-content: center;
         padding: 0;
+        width: auto;
     }
 
         .nav-item {
