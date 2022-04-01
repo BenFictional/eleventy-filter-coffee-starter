@@ -132,6 +132,7 @@ button, .button {
   background-color: $primary;
   color: $light;
   max-width: 20ch;
+  min-width: auto;
   border: none;
   padding: $unit-sml $unit-med;
   text-transform: uppercase;
