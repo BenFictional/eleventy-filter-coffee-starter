@@ -70,3 +70,10 @@ article blockquote {
         line-height: $ratio;
     }
 }
+
+p code {
+    background: var(--element);
+    color: var(--surface);
+    padding: 0.25rem 0.35rem;
+    margin: 0 .25rem;
+}

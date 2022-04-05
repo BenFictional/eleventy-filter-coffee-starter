@@ -19,7 +19,7 @@ The site has been on Wordpress for the last couple versions, with the most redes
 Sorry, your browser doesn't support embedded videos.
 </video>
 
-The old site eschewed a top navigation menu on the homepage, which I thought would be cool and provocative, but wound up regretting because the big clickable banners on the homepage did not signify their clickable potential clearly. Some other dated design chocies and a desire to adopt the increasingly popular tool of static site generators finally pushed me to start the design, or rather complete rebuild since I was moving from Wordpress to [Eleventy](https://www.11ty.dev/).
+The old site eschewed a top navigation menu on the homepage, which I thought would be cool and provocative, but wound up regretting because the big clickable banners on the homepage did not signify their clickable potential clearly. Some other dated design choices and a desire to adopt the increasingly popular tool of static site generators finally pushed me to start the design, or rather complete rebuild since I was moving from Wordpress to [Eleventy](https://www.11ty.dev/).
 
 I'm no Javascript master, so Eleventy appealed to me because it can be so rudimentary in dealing with content as simple Markdown and HTML. I was also smitten with the tool's scrappy DIY attitude and its popularity among respected developers. The other big selling points of publishing with [Jamstack](https://jamstack.org/) tools, is that you get faster sites that don't burn as much energy, and you don't need to pay for expensive shared hosting or \(shudder\) open an FTP client. [Netlify](https://www.netlify.com/) wound up being my choice of hosting tool, with easy form handling and a reliable free tier. All you need is a GitHub repo to point it at, and your site is online for free \(not including a custom domain\).
 
@@ -74,7 +74,7 @@ $primary-dark: darken($primary, 5%);
 
 ```
 
-For typography, I kept Kanit bold and Overpass /(sans and monospace/) which I spent a lot of time choosing and am still enamored by. I used a ratio to scale the sitewide font-sizes proportionally, and also used SASS variables for generic size units that are useful for margin, padding, and so on. I kept having to add more of these unit, and made it up to "xxxl", which seems bad somehow but ¯\_(ツ)_/¯.  I like to use SASS for variables that aren't going to be changed dynamically on the client side simply because they're faster to type.
+For typography, I kept Kanit bold and Overpass \(sans and monospace\) which I spent a lot of time choosing and am still enamored by. I used a ratio to scale the sitewide font-sizes proportionally, and also used SASS variables for generic size units that are useful for margin, padding, and so on. I kept having to add more of these unit, and made it up to "xxxl", which seems bad somehow but ¯\\\_(ツ)_/¯.  I like to use SASS for variables that aren't going to be changed dynamically on the client side simply because they're faster to type.
 
 ```
 // TYPE SCALE
