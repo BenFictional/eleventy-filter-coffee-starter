@@ -23,7 +23,7 @@ The old site eschewed a top navigation menu on the homepage, which I thought wou
 
 I'm no Javascript master, so Eleventy appealed to me because it can be so rudimentary in dealing with content as simple Markdown and HTML. I was also smitten with the tool's scrappy DIY attitude and its popularity among respected developers. The other big selling points of publishing with [Jamstack](https://jamstack.org/) tools, is that you get faster sites that don't burn as much energy, and you don't need to pay for expensive shared hosting or \(shudder\) open an FTP client. [Netlify](https://www.netlify.com/) wound up being my choice of hosting tool, with easy form handling and a reliable free tier. All you need is a GitHub repo to point it at, and your site is online for free \(not including a custom domain\).
 
-So I used the [Export Media Library](https://wordpress.org/plugins/export-media-library/) plugin to download all my posts as Markdown files, and got to work looking through the many great [Eleventy starter projects](https://www.11ty.dev/docs/starter/).
+So I used a Node script called [Wordpress Export to Markdown](https://github.com/lonekorean/wordpress-export-to-markdown)  to convert my posts and pages into Markdown files, and got to work looking through the many great [Eleventy starter projects](https://www.11ty.dev/docs/starter/).
 
 I hybridized parts of Keerthi Yendamuri's [Filter Coffee starter](https://github.com/Yeshwanthyk/eleventy-filter-coffee-starter) and Tom Reinert's [11ty Tailwind starter](https://github.com/tomreinert/minimal-11ty-tailwind-starter) into my own [☁️ Cloudy Night starter site 🌙](https://github.com/BenFictional/Cloudy-Night-Starter), which you can remix into your own site! 
 
