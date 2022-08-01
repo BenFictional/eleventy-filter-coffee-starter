@@ -25,6 +25,7 @@ $accent: #41A491;
   --surface-emphasis: #{ $light };
   --surface-shadow: #{ scale-color($paper, $lightness: -5%, $saturation: -50%) };
   --element: #{ $dark };
+  --element-secondary: #{ $extra-dark-gray };
   --element-subtle: #{ $gray };
 
   --primary: #{ $primary };
@@ -49,6 +50,7 @@ $accent: #41A491;
   --surface-emphasis: #{ $extra-dark-gray };
   --surface-shadow: #{ darken($dark, 5%) };
   --element: #{ $paper };
+  --element-secondary: #{ $dark-gray };
   --element-subtle: #{ $extra-dark-gray };
 
   --primary: #{ darken($primary, 5%) };

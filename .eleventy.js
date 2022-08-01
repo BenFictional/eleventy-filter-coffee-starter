@@ -53,6 +53,14 @@ module.exports = (config) => {
     }).toFormat("yyyy");
   });
 
+  config.addFilter("monthYear", dateObj => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).toLocaleString({month: 'long', year: 'numeric'});
+  });
+
+ 
+
   // Image shortcode
   config.addShortcode('img', function (path, alt, aspect, size) {
 

@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/home.html'
+title: Home
 ---
 {# HERO #}
 <section class="hero">
@@ -74,11 +75,16 @@ layout: 'layouts/home.html'
 
     <aside class="featured-pick">
          <h3>Cool Picks</h3>
-         <p class="pick-intro">Recommendations and curated finds</p>
-        {%- for pick in collections.cool.slice(0,1) -%}
-            {{ pick.templateContent | safe }}
-        {%- endfor -%}
-        {# <a class="pick-archive"href="#">Previous cool picks</a> #}
+        
+         
+         {% set picklist = collections.cool | reverse %}
+            {% for post in picklist %}
+                {% if loop.index0 < 1 %}
+                    {% include "partials/cool-pick.njk" %}
+                {% endif %}
+            {% endfor %}
+
+        <a class="pick-archive"href="/cool-picks">Previous cool picks</a>
     </aside>
 </section>
 

@@ -1,4 +1,3 @@
-<article class="cool-pick post-item">
-    <span class="boxed">Picked on {{ post.date | readableDate }}</span>
+ <p class="pick-intro">Recommendations and links for <span class="pick-month"> {{ post.date | monthYear }}</span>:</p>
     {{ post.templateContent | safe }}
-</article>
+

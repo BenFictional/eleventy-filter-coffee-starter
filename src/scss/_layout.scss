@@ -237,9 +237,7 @@ article .article-header {
 article code { font-size: $small-font-size; }
 
 
-
-
-section {
+.home section {
   padding: clamp($unit-med, 5vw, 12rem);
 }
 

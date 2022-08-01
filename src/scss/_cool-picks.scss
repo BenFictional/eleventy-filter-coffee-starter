@@ -1,16 +1,14 @@
-// ARCHIVE PAGE
-
-
-.boxed {
-    display: inline-block;
-    font-family: $mono-font;
-    text-transform: uppercase;
-    margin-bottom: $unit-med;
-    padding: $unit-sml;
-    border: 1px solid var(--element-subtle);
+.pick-intro {
+    color: var(--element-secondary);
 }
 
-.cool-pick .boxed {
-    transform: rotate(-2deg);
+.pick-month { font-weight: bold; }
+
+.cool-pick ul li {
+    margin-bottom: $unit-med;
+}
+
+.cool-picks-archive section {
+    padding-bottom: $unit-lrg;
 }
 

@@ -49,7 +49,7 @@
     
 
     {% include "partials/navigation.njk" %}
-    <main class="{{ title | lower }}">
+    <main class="{{ title | lower | slug }}">
     {% block content %}{% endblock%}
     </main>
     {% include "partials/footer.njk" %}  
