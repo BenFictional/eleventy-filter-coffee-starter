@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Foggy Bottom Microobservatory
 description: Sculptural investigation of local microorganisms and daily web series
 date: 2016-07-05

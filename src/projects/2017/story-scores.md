@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Story Scores
 description: Crowd-sourced filmmaking and participatory art.
 date: 2017-06-20

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: CAESAR Mission Proposal
 description: Branding for proposed NASA mission
 date: 2018-08-14

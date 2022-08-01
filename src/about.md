@@ -1,6 +1,6 @@
 ---
 title: About
-layout: 'layouts/article.html'
+layout: 'layouts/article.njk'
 eleventyNavigation:
   key: About
   order: 3

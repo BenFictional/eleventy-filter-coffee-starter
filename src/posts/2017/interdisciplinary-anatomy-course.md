@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.html
+layout: layouts/post.njk
 title: Interdiciplinary Anatomy Course
 description:  A new collaborative course at Penn State
 date: 2017-04-26

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Hub for AI Research in Archives
 description:  Logo design
 date: 2021-05-01

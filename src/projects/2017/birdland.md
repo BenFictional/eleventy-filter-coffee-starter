@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Birdland in the Anthropocene
 description: Experimental videos presenting wildlife in a historical museum.
 date: 2017-01-01

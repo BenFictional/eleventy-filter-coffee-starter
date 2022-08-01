@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Chronoecology Corps
 description: Time-traveling naturalist performances and world-building
 date: 2013-01-22

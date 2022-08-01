@@ -1,6 +1,6 @@
 ---
 title: Contact
-layout: 'layouts/article.html'
+layout: 'layouts/article.njk'
 eleventyNavigation:
   key: Contact
   order: 4

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Random Access Memories
 description:  Immersive web fiction about mysterious computer punchcards. 
 date: 2018-09-06

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Water Under the Bridge
 description: Collaborative resource for water activism and education
 date: 2017-01-11

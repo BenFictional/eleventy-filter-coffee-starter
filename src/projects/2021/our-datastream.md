@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Our Datastream
 description:  An illustrated guide to data economies and emerging cooperatives.
 date: 2021-07-01

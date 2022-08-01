@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.html
+layout: layouts/post.njk
 title: A New Site with Eleventy
 description:  Migrating from Wordpress and what makes this site tick.
 date: 2022-03-04
@@ -102,7 +102,7 @@ $unit-xxxl: 18rem;
 In Eleventy, you can automatically generate [collections](https://www.11ty.dev/docs/collections/) of pages if they have the same tag in the frontmatter \( some metadata placed at the top of a Markdown file\). Coming from Wordpress, it feels weird to use "tags" in the same way as a custom post type, as opposed to, you know... tags. One of my favorite things in Wordpress is creating custom fields to really flesh out and customize metadata for posts. This is still possible in Eleventy as you can see from the frontmatter included on one of my "projects":
 
 ```
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Our Datastream
 description:  An illustrated guide to data economies and emerging cooperatives.
 date: 2021-07-01

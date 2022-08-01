@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: The Lost Adventures of Matthew Fontaine Maury
 description: Pseudo-historical storytelling from the archives of Chronoecology
 date: 2014-04-14

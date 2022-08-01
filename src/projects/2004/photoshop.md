@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Downloaded Photoshop 7.0
 description: This was definitely a legal purchase.
 date: 2004-05-01

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.html
+layout: layouts/post.njk
 title: Crowdsourced Narratives & Participatory Art
 description: An essay on audience participation and art.
 date: 2018-04-12

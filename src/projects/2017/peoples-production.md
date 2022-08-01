@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: People's Production
 description: Crowd-sourced filmmaking and participatory art.
 date: 2017-12-21

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Zero Tide
 description: Cyborg turtles transcend the physical plane in this multimedia comic. 
 date: 2015-04-22

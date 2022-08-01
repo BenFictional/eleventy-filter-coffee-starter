@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Became a parent
 description: Folks, not much is getting done for a while.
 date: 2019-01-01

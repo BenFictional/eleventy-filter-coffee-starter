@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.html
+layout: layouts/post.njk
 title: SVG Sonification
 description:  How to turn vector drawings into MIDI instrumentation
 date: 2017-06-19

@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Quantum Tours Americana
 description: The world's premiere time travel service and audio tours.
 date: 2014-11-28

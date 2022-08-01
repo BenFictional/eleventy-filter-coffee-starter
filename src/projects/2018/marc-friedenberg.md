@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.html
+layout: layouts/project.njk
 title: Marc Friedenberg for Congress
 description: Campaign branding and creative direction
 date: 2018-11-01
