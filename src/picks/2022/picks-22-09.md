@@ -1,5 +1,5 @@
 ---
-date: 2022-08-01
+date: 2022-09-01
 ---
 
 - 🚆 [The Coding Train](https://thecodingtrain.com//) is a free series of tutorials by Daniel Shiffman that makes it feel fun to learn, with courses like "Git and GitHub for poets"
